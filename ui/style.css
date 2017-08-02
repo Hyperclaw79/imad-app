@@ -79,26 +79,27 @@
 p {
     box-shadow: 1px 1px 5px red;
   }
-  #SO {
+#SO {
     box-shadow: 10px 10px 5px black;
   }
-  .github-flair {
+.github-flair {
     box-shadow: 2px 2px 5px grey;
 	float: left
   }
-  h3 {
+h3 {
     box-shadow: 1px 1px 5px blue;
 	text-shadow: 3px 3px 5px blue;
   }
-  #chibi {
+#chibi {
      position: fixed;
      width: 100px;
      height: 100px;
      top: 0;
      left: 0;
   }
-  #details {
-     border: 10px solid transparent;
+#details {
+    float:right;
+    border: 10px solid transparent;
     padding: 15px;
     -webkit-border-image: url(http://multimedia.3m.com/mws/media/1178596P/3m-wrap-film-1080-m227-matte-blue-metallic.jpg?boundedSize=310) 30 stretch; /* Safari 3.1-5 */
     -o-border-image: url(http://multimedia.3m.com/mws/media/1178596P/3m-wrap-film-1080-m227-matte-blue-metallic.jpg?boundedSize=310) 30 stretch; /* Opera 11-12.1 */
@@ -107,7 +108,7 @@ p {
 
   }
   
-  #im_gif:hover {
+#im_gif:hover {
 	  opacity:0.6;
 	  transition: width 2s, height 4s;
   } 
