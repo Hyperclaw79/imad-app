@@ -1,3 +1,39 @@
+.col-sm-4.sidenav > h2 {
+    color: #ff0000;
+    box-shadow: 1px 1px 5px blue;
+	text-shadow: 5px 5px 5px black;
+}
+
+.col-sm-4.sidenav > p {
+    padding-top: 150px;
+    box-shadow: 0px 0px 0px
+}
+
+
+.avatar {
+    text-align: center;
+    position: relative;
+    width: 65px;
+    height: 65px;
+    margin-left: 5px;
+}
+
+
+.info {
+    width: 150px;
+    text-align: right;
+    font-size: 12px;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+.container-fluid.text-center.footer {
+    color: #ff0000
+}
 #welcome {
 	display: none;
 }
@@ -10,7 +46,6 @@
 .navbar {
   margin-bottom: 0;
   border-radius: 0;
-  float:left;
 }
 
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
@@ -26,6 +61,10 @@ p {
     box-shadow: 2px 2px 5px grey;
 	float: left
   }
+  h3 {
+    box-shadow: 1px 1px 5px blue;
+	text-shadow: 3px 3px 5px blue;
+  }
   #chibi {
      position: fixed;
      width: 100px;
@@ -34,14 +73,12 @@ p {
      left: 0;
   }
   .sidenav {
-  float: left;
   padding-top: 50px;
   border-radius: 15px 50px 30px 5px;
   background-image: url(http://diabetesdad.org/files/2013/01/Blue-flame-extinguished.jpg);
   }
   #details {
-    float: right;  
-    border: 10px solid transparent;
+     border: 10px solid transparent;
     padding: 15px;
     -webkit-border-image: url(http://multimedia.3m.com/mws/media/1178596P/3m-wrap-film-1080-m227-matte-blue-metallic.jpg?boundedSize=310) 30 stretch; /* Safari 3.1-5 */
     -o-border-image: url(http://multimedia.3m.com/mws/media/1178596P/3m-wrap-film-1080-m227-matte-blue-metallic.jpg?boundedSize=310) 30 stretch; /* Opera 11-12.1 */
@@ -69,7 +106,6 @@ footer {
 /* On small screens, set height to 'auto' for sidenav and grid */
 @media screen and (max-width: 767px) {
   .sidenav {
-    min-height: 135vh;
     padding: 15px;
   }
   .row.content {height:auto;}
