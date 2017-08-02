@@ -7,6 +7,21 @@
     background-image: url(http://diabetesdad.org/files/2013/01/Blue-flame-extinguished.jpg);
 }
 
+.thumbnail {
+    display:inline-block;
+    max-width:100%;
+    height:auto;
+    padding:4px;
+    line-height:1.42857143;
+    background-color:#fff;
+    border:1px solid #ddd;
+    border-radius:4px;
+    -webkit-transition:all .2s ease-in-out;
+    -o-transition:all .2s ease-in-out;
+    -moz-transition:all .2s ease-in-out;
+    transition:all .2s ease-in-out
+}
+
 .sidenav > h2 {
     color: #ff0000;
     box-shadow: 1px 1px 5px blue;
