@@ -1,22 +1,83 @@
-body {
-    font-family: sans-serif;
-    background-color: lightgrey;
-    margin-top: 75px;
+/*****************************************************************/
+
+#welcome {
+	display: none;
 }
 
-.center {
-    text-align: center;
+#oh {
+	display: none;
 }
 
-.text-big {
-    font-size: 300%;
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
 }
 
-.bold {
-    font-weight: bold;
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {height: 450px}
+
+p {
+    box-shadow: 1px 1px 5px red;
+  }
+  #SO {
+    box-shadow: 10px 10px 5px black;
+  }
+  .github-flair {
+    box-shadow: 2px 2px 5px grey;
+	float: left
+  }
+  h2 {
+    box-shadow: 1px 1px 5px blue;
+	text-shadow: 5px 5px 5px black;
+  }
+  h3 {
+    box-shadow: 1px 1px 5px blue;
+	text-shadow: 3px 3px 5px blue;
+  }
+  #chibi {
+     position: fixed;
+     width: 100px;
+     height: 100px;
+     top: 0;
+     left: 0;
+  }
+  .sidenav {
+  padding-top: 50px;
+  border-radius: 15px 50px 30px 5px;
+  background-image: url(http://diabetesdad.org/files/2013/01/Blue-flame-extinguished.jpg);
+  }
+  #details {
+     border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(http://multimedia.3m.com/mws/media/1178596P/3m-wrap-film-1080-m227-matte-blue-metallic.jpg?boundedSize=310) 30 stretch; /* Safari 3.1-5 */
+    -o-border-image: url(http://multimedia.3m.com/mws/media/1178596P/3m-wrap-film-1080-m227-matte-blue-metallic.jpg?boundedSize=310) 30 stretch; /* Opera 11-12.1 */
+    -moz-border-image: url(http://multimedia.3m.com/mws/media/1178596P/3m-wrap-film-1080-m227-matte-blue-metallic.jpg?boundedSize=310) 30 stretch;
+    border-image: url(http://multimedia.3m.com/mws/media/1178596P/3m-wrap-film-1080-m227-matte-blue-metallic.jpg?boundedSize=310) 30 stretch;
+
+  }
+  
+  #im_gif:hover {
+	  opacity:0.6;
+	  transition: width 2s, height 4s;
+  } 
+
+.full-height {
+  min-height: calc(100vh - 50px);
 }
 
-.img-medium {
-    height: 200px;
+/* Set black background color, white text and some padding */
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
 }
 
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    min-height: 135vh;
+    padding: 15px;
+  }
+  .row.content {height:auto;}
+}
