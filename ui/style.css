@@ -34,7 +34,8 @@ p {
      left: 0;
   }
   .sidenav {
-  float: left;      
+  float: left;
+  width: 50px;
   padding-top: 50px;
   border-radius: 15px 50px 30px 5px;
   background-image: url(http://diabetesdad.org/files/2013/01/Blue-flame-extinguished.jpg);
