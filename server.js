@@ -75,16 +75,16 @@ function createTemplate(data){
                 <meta name = "author" content = "Harshith Thota"/>
                 <meta charset="utf-8">
                 <title>
-                    $(title)
+                    ${title}
                 </title>    
             </head>
             <body>
                 <div class="container">
                     <div>
-                        <h1>$(heading)</h1>
-                        <p>$(date)</p>
+                        <h1>${heading}</h1>
+                        <p>${date}</p>
                     </div>
-                    $(content)
+                    ${content}
                 </div>
                 <footer>Click <a href = "/">here</a> to go back to the homepage.</footer>
             </body>            
