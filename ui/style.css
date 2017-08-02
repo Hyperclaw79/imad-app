@@ -1,6 +1,7 @@
 .sidenav {
     border: 1px solid #1fb8eb;
-    margin: 150px;
+    margin-top: 5px;
+    margin-left: 50px;
     float: left;
     padding-top: 50px;
     border-radius: 15px 50px 30px 5px;
