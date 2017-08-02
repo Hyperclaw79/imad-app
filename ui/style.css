@@ -107,6 +107,9 @@ h3 {
     border-image: url(http://multimedia.3m.com/mws/media/1178596P/3m-wrap-film-1080-m227-matte-blue-metallic.jpg?boundedSize=310) 30 stretch;
 
   }
+#details.p {
+    width:75vw;
+}
   
 #im_gif:hover {
 	  opacity:0.6;
