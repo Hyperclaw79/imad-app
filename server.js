@@ -17,16 +17,9 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
-app.get('/article-one', function (req, res) {
-  res.send(createTemplate(articleOne));
-});
-
-app.get('/article-two', function (req, res) {
-  res.send(createTemplate(articleTwo));
-});
-
-app.get('/article-three', function (req, res) {
-  res.send(createTemplate(articleThree));
+app.get('/:articleName', function (req, res) {
+  var articleName = req.params.articleName;
+  res.send(createTemplate(articles[articleName]));
 });
 
 // Do not change port, otherwise your app won't run on IMAD servers
@@ -36,31 +29,33 @@ var port = 80;
 app.listen(port, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-var articleOne = {
-    title: "You are viewing Article One!",
-    date: "2nd August",
-    heading: "This is article one.",
-    content: `<div>
-                <p>This is just a dummy article.</p>
-            </div>`
-};
-var articleTwo = {
-    title: "You are viewing Article Two!",
-    date: "2nd August",
-    heading: "This is article two.",
-    content: `<div>
-                <p>This is just a dummy article.</p>
-            </div>`
-};
-var articleThree = {
-    title: "You are viewing Article Three!",
-    date: "2nd August",
-    heading: "This is article three.",
-    content: `<div>
-                <p>This is just a dummy article.</p>
-            </div>`
+var articles = {
+    'article-one': {
+        title: "You are viewing Article One!",
+        date: "2nd August",
+        heading: "This is article one.",
+        content: `<div>
+                    <p>This is the first dummy article.</p>
+                </div>`
+    },
+    'article-two': {
+        title: "You are viewing Article Two!",
+        date: "2nd August",
+        heading: "This is article two.",
+        content: `<div>
+                    <p>This is a second dummy article.</p>
+                </div>`
+    },
+    'article-three': {
+        title: "You are viewing Article Three!",
+        date: "2nd August",
+        heading: "This is article three.",
+        content: `<div>
+                    <p>Another dummy article for you.</p>
+                </div>`
+    }
 };
 function createTemplate(data){
     var title = data.title;
