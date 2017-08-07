@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-  <script type="text/javascript" src = "ui/main.js"></script>
   <link rel="stylesheet" type="text/css" href="ui/style.css">
   <title>Welcome to Harshith Thota's IMAD Profile!</title>
   <meta name = "description" content = "This is the IMAD profile for Harshith Thota."/>
@@ -27,7 +26,7 @@
 
   </script>
 </head>
-<body background = "http://wallpapercave.com/wp/coo4WpY.jpg" onload = welc()> 
+<body background = "http://wallpapercave.com/wp/coo4WpY.jpg" onload = init_loader()> 
 <script>
 $(document).ready(function(){
     animateIMG();
@@ -76,6 +75,16 @@ function changer(){
 	}
 </script>
 <script>
+funtion init_loader(){
+    welc();
+    inc_cnt();
+}
+function inc_cnt(){
+   var script = document.createElement('script');
+   script.src = 'ui/main.js';
+   var head = document.getElementsByTagName("head")[0];
+   head.appendChild(script);
+}
 function welc(){
 	var wel = document.getElementById("welcome");
 	wel.play();
