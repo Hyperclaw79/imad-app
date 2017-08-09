@@ -23,6 +23,10 @@ app.get('/counter', function (req, res){
   res.send(counter.toString());
 });
 
+app.get('/favicon', function (req, res) {
+  res.sendFile("https://www.shareicon.net/download/2015/09/24/106441_man.ico");
+});
+
 app.get('/:comm', function (req, res) {
   var comment = req.params.comm;
   res.send(updateComment(comment));
