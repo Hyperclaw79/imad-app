@@ -23,7 +23,7 @@ app.get('/counter', function (req, res){
   res.send(counter.toString());
 });
 
-app.get('/favicon', function (req, res) {
+app.get('/favicon.ico', function (req, res) {
   res.sendFile("https://www.shareicon.net/download/2015/09/24/106441_man.ico");
 });
 
