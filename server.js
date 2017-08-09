@@ -132,7 +132,7 @@ function updateComment(comment){
              </div>
     	  `;
     for(var i=0;i<commList.length;i++){
-        subTemplate = subTemplate + `<div class="bubble-list" style="padding-left:15%">
+        subTemplate = subTemplate + `<div class="bubble-list" style="padding-left:15px">
              <div class="bubble clearfix">
                 <img src=${urlList[Math.round(Math.random()*urlList.length)]} style = "border: 3px solid ${colList[i]};width:80px;height:80px;"/>
              <div class="bubble-content" style = "border: 3px solid ${colList[i]};">
