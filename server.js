@@ -107,6 +107,7 @@ function createTemplate(data){
 }
 
 var commList = [];
+var floater = [right,left];
 var urlList = ["https://www.sideshowtoy.com/wp-content/uploads/2016/04/captain-america-civil-war-iron-man-xlvi-sixth-scale-marvel-feature-902708.jpg","http://themepack.me/i/c/749x468/media/g/149/iron-man-theme-1.jpg","https://www.sideshowtoy.com/photo_902622_thumb.jpg","http://worldversus.com/img/ironman.jpg","https://www.sideshowtoy.com/assets/products/400310-iron-man-mark-iii/lg/marvel-iron-man-mark-3-life-size-figure-400310-08.jpg","https://s-media-cache-ak0.pinimg.com/736x/52/08/ac/5208ac301eb3fb378dc6b69a5e94c6ec--marvel-heroes-marvel-dc.jpg","https://images-na.ssl-images-amazon.com/images/G/01/DVD/Paramount/detailpages/IronMan/IronMan_Still_H5_L.jpg","https://ctd-thechristianpost.netdna-ssl.com/en/full/30892/iron-man-4.jpg","https://s-media-cache-ak0.pinimg.com/736x/5d/99/cd/5d99cdab52c1afda4af0b97a116dbda0--comic-art-comic-book.jpg","https://s-media-cache-ak0.pinimg.com/736x/8b/b1/60/8bb160c9f3b45906ef8ffab6ac972870--marvel-dc-comics-avengers-marvel.jpg"];
 function updateComment(comment){
     var newComm = comment;
@@ -122,7 +123,7 @@ function updateComment(comment){
         }
         colList[k]= col;
     }
-    var subTemplate = `<div class="bubble-list">
+    var subTemplate = `<div class="bubble-list" style = "float:left">
              <div class="bubble clearfix"  style="opacity:1">
                 <img src="https://avatars3.githubusercontent.com/u/29298411?v=4&s=400"/>
              <div class="bubble-content">
@@ -131,7 +132,7 @@ function updateComment(comment){
              </div>
     	  `;
     for(var i=0;i<commList.length;i++){
-        subTemplate = subTemplate + `<div class="bubble-list" style = "float:right">
+        subTemplate = subTemplate + `<div class="bubble-list" style = "float:${floater[Math.ceil(i%2)]}">
              <div class="bubble clearfix">
                 <img src=${urlList[Math.round(Math.random()*urlList.length)]} style = "border: 3px solid ${colList[i]};width:80px;height:80px;"/>
              <div class="bubble-content" style = "border: 3px solid ${colList[i]}">
