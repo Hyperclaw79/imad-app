@@ -148,6 +148,7 @@ function updateComment(comment){
     		body {
     			background-color:#f0f0ee;
     			font:1em "Trebuchet MS";
+    			background-image: url(https://images6.alphacoders.com/517/thumb-1920-517273.jpg);
             }
     		.bubble img {
     			float:left;
