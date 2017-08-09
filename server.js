@@ -114,7 +114,7 @@ function updateComment(comment){
                 <img src="#"/>
              <div class="bubble-content">
                 <div class="point"></div>
-                <p>${commList[i]}</p>
+                <p>${i}: ${commList[i]}</p>
              </div>`;
         }
     subTemplate = `<div class="bubble-list">
