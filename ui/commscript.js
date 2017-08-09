@@ -4,7 +4,7 @@ button.onclick = function(){
     var reqC = new XMLHttpRequest();
     url = 'http://dragonlordthota717.imad.hasura-app.io/submit-comment?comm='+commText;
     window.open(url);
-    request.open('GET',url, true);
-    request.send(null);
+    reqC.open('GET',url, true);
+    reqC.send(null);
 };
 
