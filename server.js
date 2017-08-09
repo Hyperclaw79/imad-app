@@ -125,18 +125,18 @@ function updateComment(comment){
     var subTemplate = `<div class="bubble-list">
              <div class="bubble clearfix"  style="opacity:1">
                 <img src="https://avatars3.githubusercontent.com/u/29298411?v=4&s=400"/>
-             <div class="bubble-content" >
+             <div class="bubble-content">
                 <div class="point"></div>
-                <p  style="opacity:1">This is the first comment made by Harshith Thota himself.</p>
+                <p>This is the first comment made by Harshith Thota himself.</p>
              </div>
     	  `;
     for(var i=0;i<commList.length;i++){
         subTemplate = subTemplate + `<div class="bubble-list">
-             <div class="bubble clearfix"  style="opacity:1">
+             <div class="bubble clearfix">
                 <img src=${urlList[Math.round(Math.random()*urlList.length)]} style = "border: 3px solid ${colList[i]};width:80px;height:80px;"/>
              <div class="bubble-content" style = "border: 3px solid ${colList[i]}">
                 <div class="point"></div>
-                <p  style="opacity:1">${commList[i]}</p>
+                <p>${commList[i]}</p>
              </div>`;
         }
     var commentTemplate = 
@@ -195,8 +195,8 @@ function updateComment(comment){
     	</style>
        </head>
        <body>
-          <div style="margin: 30px;background-color: #ffffff;border: 3px solid black;opacity: 0.5;filter: alpha(opacity=50);"><h1 style="text-shadow: 3px 3px 5px blue;opacity: 1">Here is the anonymous comment feed:</h1></div>
-          <div style="margin: 30px;background-color: #ffffff;border: 5px solid black;opacity: 0.5;filter: alpha(opacity=50);">
+          <div style="margin: 30px;background-color: rgba(255, 255, 255, 0.4);border: 3px solid black;"><h1 style="text-shadow: 3px 3px 5px blue;">Here is the anonymous comment feed:</h1></div>
+          <div style="margin: 30px;background-color: rgba(255, 255, 255, 0.4);border: 5px solid black;">
           ${subTemplate}
           </div>
        </body>
