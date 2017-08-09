@@ -14,6 +14,7 @@ function loader(){
     request.send(null);
 }
 var sub = document.getElementById('commSub');
+console.log(sub);
 sub.onclick = function(){
     var commText = document.getElementById('commText').value;
     var reqC = new XMLHttpRequest();
