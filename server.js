@@ -131,7 +131,7 @@ function updateComment(comment){
                 <img src="#"/ style = "border: 3px solid ${colList[i]}">
              <div class="bubble-content" style = "border: 3px solid ${colList[i]}">
                 <div class="point"></div>
-                <p>${commList[i]}</p>
+                <textarea>${commList[i]}</textarea>
              </div>`;
         }
     var commentTemplate = 
