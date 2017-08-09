@@ -123,10 +123,10 @@ function updateComment(comment){
         }
         colList[k]= col;
     }
-    var subTemplate = `<div class="bubble-list">
+    var subTemplate = `<div class="bubble-list"  style = "width:110%;height:110%">
              <div class="bubble clearfix">
                 <img src="https://avatars3.githubusercontent.com/u/29298411?v=4&s=400"/ style = "border: 3px solid ${colList[i]};width:100px;height:100px;box-shadow:10px 10px 5px rgba(0,0,0,.2);"/>
-             <div class="bubble-content" style = "width:110%;height:110%">
+             <div class="bubble-content">
                 <div class="point"></div>
                 <p>This is the first comment made by Harshith Thota himself.</p>
              </div>
