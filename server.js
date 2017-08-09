@@ -123,10 +123,10 @@ function updateComment(comment){
         }
         colList[k]= col;
     }
-    var subTemplate = `<div class="bubble-list"  style = "width:110%;height:110%">
+    var subTemplate = `<div class="bubble-list"  style = "width:110%;height:110%;padding-left:5px">
              <div class="bubble clearfix">
                 <img src="https://avatars3.githubusercontent.com/u/29298411?v=4&s=400"/ style = "border: 3px solid ${colList[i]};width:100px;height:100px;box-shadow:10px 10px 5px rgba(0,0,0,.2);"/>
-             <div class="bubble-content">
+             <div class="bubble-content" style = "padding-top:5px">
                 <div class="point"></div>
                 <p>This is the first comment made by Harshith Thota himself.</p>
              </div>
@@ -134,7 +134,7 @@ function updateComment(comment){
     for(var i=0;i<commList.length;i++){
         subTemplate = subTemplate + `<div class="bubble-list" style="padding-left:15px">
              <div class="bubble clearfix">
-                <img src=${urlList[Math.round(Math.random()*urlList.length)]} style = "border: 3px solid ${colList[i]};width:80px;height:80px;"/>
+                <img src=${urlList[Math.round(Math.random()*urlList.length)]} style = "border: 3px solid ${colList[i]};width:80px;height:80px;box-shadow:10px 10px 5px rgba(0,0,0,.2);"/>
              <div class="bubble-content" style = "border: 3px solid ${colList[i]};">
                 <div class="point"></div>
                 <p>${commList[i]}</p>
@@ -155,7 +155,6 @@ function updateComment(comment){
     			height:80px;
     			border:3px solid #000;
     			border-radius:10px
-    			box-shadow:10px 10px 5px rgba(0,0,0,.2);
             }
     		.bubble-content {
     			position:relative;
