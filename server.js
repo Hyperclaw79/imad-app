@@ -1,5 +1,3 @@
-console.log(commList);
-    
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
@@ -119,6 +117,14 @@ function updateComment(comment){
                 <p>${commList[i]}</p>
              </div>`;
         }
+    subTemplate = `<div class="bubble-list">
+             <div class="bubble clearfix">
+                <img src="#"/>
+             <div class="bubble-content">
+                <div class="point"></div>
+                <p>This is the first comment made by Harshith Thota himself.</p>
+             </div>
+    	  ` + subTemplate;
     var commentTemplate = 
     `<html>
        <head>
@@ -174,14 +180,7 @@ function updateComment(comment){
     	</style>
        </head>
        <body>
-          <div class="bubble-list">
-             <div class="bubble clearfix">
-                <img src="#"/>
-             <div class="bubble-content">
-                <div class="point"></div>
-                <p>This is the first comment made by Harshith Thota himself.</p>
-             </div>
-    	  ${subTemplate}   	
+          ${subTemplate}   	
        </body>
     </html>`;
     return commentTemplate;
