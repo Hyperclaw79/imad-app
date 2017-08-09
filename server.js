@@ -123,7 +123,7 @@ function updateComment(comment){
         }
         colList[k]= col;
     }
-    var subTemplate = `<div class="bubble-list">
+    var subTemplate = `<div class="bubble-list" style="padding-left:15%>
              <div class="bubble clearfix">
                 <img src="https://avatars3.githubusercontent.com/u/29298411?v=4&s=400"/>
              <div class="bubble-content">
@@ -132,7 +132,7 @@ function updateComment(comment){
              </div>
     	  `;
     for(var i=0;i<commList.length;i++){
-        subTemplate = subTemplate + `<div class="bubble-list">
+        subTemplate = subTemplate + `<div class="bubble-list" style="padding-left:15%">
              <div class="bubble clearfix">
                 <img src=${urlList[Math.round(Math.random()*urlList.length)]} style = "border: 3px solid ${colList[i]};width:80px;height:80px;"/>
              <div class="bubble-content" style = "border: 3px solid ${colList[i]};">
@@ -151,20 +151,21 @@ function updateComment(comment){
             }
     		.bubble img {
     			float:left;
-    			width:70px;
-    			height:70px;
+    			width:200px;
+    			height:200px;
     			border:3px solid #000;
     			border-radius:10px
             }
     		.bubble-content {
     			position:relative;
     			float:left;
+    			margin-top:7px;
     			margin-left:12px;
-    			width:400px;
+    			width:800px;
     			padding:0px 20px;
     			border-radius:10px;
     			background-color:#FFFFFF;
-    			box-shadow:1px 1px 5px rgba(0,0,0,.2);
+    			box-shadow:10px 10px 5px rgba(0,0,0,.2);
     			border:3px solid #000;
     		}
     		.bubble {
