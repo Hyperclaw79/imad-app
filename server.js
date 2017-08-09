@@ -23,6 +23,11 @@ app.get('/counter', function (req, res){
   res.send(counter.toString());
 });
 
+app.get('/:comment', function (req, res) {
+  var articleName = req.params.comment;
+  res.send(updateComment(comment));
+});
+
 app.get('/:articleName', function (req, res) {
   var articleName = req.params.articleName;
   res.send(createTemplate(articles[articleName]));
@@ -94,4 +99,80 @@ function createTemplate(data){
 }
 
 
+
+function updateComment(data){
+    var newComm = data.comment;
+    var commentTemplate = 
+    `<html>
+       <head>
+          <title>Comments</title>
+    	  <style>
+    		body {
+    			background-color:#f0f0ee;
+    			font:1em "Trebuchet MS";
+            }
+    		.bubble img {
+    			float:left;
+    			width:70px;
+    			height:70px;
+    			border:3px solid #ffffff;
+    			border-radius:10px
+            }
+    		.bubble-content {
+    			position:relative;
+    			float:left;
+    			margin-left:12px;
+    			width:400px;
+    			padding:0px 20px;
+    			border-radius:10px;
+    			background-color:#FFFFFF;
+    			box-shadow:1px 1px 5px rgba(0,0,0,.2);
+    		}
+    		.bubble {
+    			margin-top:20px;
+    		}
+    		.point {
+    			border-top:10px solid transparent;
+    			border-bottom:10px solid transparent;
+    			border-right: 12px solid #FFF;
+    			position:absolute;
+    			left:-10px;
+    			top:12px;
+    		}
+    		.clearfix:after {
+    			visibility:hidden;
+    			display:block;
+    			font-size:0;
+    			content: ".";
+    			clear:both;
+    			height:0;
+    			line-height:
+    		}
+    		.clearfix {
+    			display: inline-block;
+    		}
+    		* html .clearfix {
+    				height: 1%;
+    				}
+    	</style>
+       </head>
+       <body>
+          <div class="bubble-list">
+             <div class="bubble clearfix">
+                <img src="#"/>
+             <div class="bubble-content">
+                <div class="point"></div>
+                <p>This is the first comment made by Harshith Thota himself.</p>
+             </div>
+    	  <div class="bubble-list">
+             <div class="bubble clearfix">
+                <img src="#"/>
+             <div class="bubble-content">
+                <div class="point"></div>
+                <p>${newComm}</p>
+             </div>   	
+       </body>
+    </html>`;
+    return commentTemplate;
+}
 
