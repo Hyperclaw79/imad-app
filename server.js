@@ -1,3 +1,5 @@
+console.log(commList);
+    
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
@@ -117,7 +119,6 @@ function updateComment(comment){
                 <p>${commList[i]}</p>
              </div>`;
         }
-    console.log(commList);
     var commentTemplate = 
     `<html>
        <head>
