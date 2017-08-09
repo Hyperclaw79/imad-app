@@ -139,7 +139,7 @@ function updateComment(comment){
     			float:left;
     			width:70px;
     			height:70px;
-    			border:3px solid #ffffff;
+    			border:3px solid #000;
     			border-radius:10px
             }
     		.bubble-content {
