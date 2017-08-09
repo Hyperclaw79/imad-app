@@ -108,6 +108,11 @@ function updateComment(comment){
     if(commList.indexOf(newComm) == -1){
         commList.push(newComm);
     }
+    var letters = '0123456789ABCDEF';
+    var col = '#';
+    for (var j = 0; j < 6; j++) {
+        col = col + letters[Math.floor(Math.random() * 16)];
+    }    
     var subTemplate = `<div class="bubble-list">
              <div class="bubble clearfix">
                 <img src="https://avatars3.githubusercontent.com/u/29298411?v=4&s=400"/>
@@ -120,17 +125,12 @@ function updateComment(comment){
         
         subTemplate = subTemplate + `<div class="bubble-list">
              <div class="bubble clearfix">
-                <img src="#"/>
-             <div class="bubble-content">
+                <img src="#"/ style = "border: 3px solid ${col}">
+             <div class="bubble-content" style = "border: 3px solid ${col}">
                 <div class="point"></div>
                 <p>${commList[i]}</p>
              </div>`;
         }
-    var letters = '0123456789ABCDEF';
-    var col = '#';
-    for (var j = 0; j < 6; j++) {
-        col = col + letters[Math.floor(Math.random() * 16)];
-    }    
     var commentTemplate = 
     `<html>
        <head>
@@ -144,7 +144,7 @@ function updateComment(comment){
     			float:left;
     			width:70px;
     			height:70px;
-    			border:3px solid ${col};
+    			border:3px solid #000;
     			border-radius:10px
             }
     		.bubble-content {
@@ -156,7 +156,7 @@ function updateComment(comment){
     			border-radius:10px;
     			background-color:#FFFFFF;
     			box-shadow:1px 1px 5px rgba(0,0,0,.2);
-    			border:3px solid ${col};
+    			border:3px solid #000;
     		}
     		.bubble {
     			margin-top:20px;
