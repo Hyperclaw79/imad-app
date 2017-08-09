@@ -142,7 +142,7 @@ function updateComment(comment){
     var commentTemplate = 
     `<html>
        <head>
-          <title>Comments</title>
+          <title>Comment Feed for Harshith Thota's IMAD Profile</title>
     	  <style>
     		body {
     			background-color:#f0f0ee;
@@ -195,7 +195,10 @@ function updateComment(comment){
     	</style>
        </head>
        <body>
-          ${subTemplate}   	
+          <div style="margin: 30px;background-color: #ffffff;border: 3px solid black;opacity: 0.5;filter: alpha(opacity=50);"><h1 style="text-shadow: 3px 3px 5px blue;">Here is the anonymous comment feed:</h1></div>
+          <div style="margin: 30px;background-color: #ffffff;border: 5px solid black;opacity: 0.5;filter: alpha(opacity=50);">
+          ${subTemplate}
+          </div>
        </body>
     </html>`;
     return commentTemplate;
