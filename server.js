@@ -151,8 +151,8 @@ function updateComment(comment){
             }
     		.bubble img {
     			float:left;
-    			width:200px;
-    			height:200px;
+    			width:80px;
+    			height:80px;
     			border:3px solid #000;
     			border-radius:10px
             }
