@@ -106,7 +106,7 @@ var commList = [];
 function updateComment(comment){
     var newComm = comment;
     commList.push(newComm);
-    /*var subTemplate = '';
+    var subTemplate = '';
     for(var i=0;i<commList.length;i++){
         
         subTemplate = subTemplate + `<div class="bubble-list">
@@ -114,16 +114,10 @@ function updateComment(comment){
                 <img src="#"/>
              <div class="bubble-content">
                 <div class="point"></div>
-                <p>${commList[commList.length-1]}</p>
+                <p>${commList[i]}</p>
              </div>`;
-        }*/
-    var subTemplate = `<div class="bubble-list">
-             <div class="bubble clearfix">
-                <img src="#"/>
-             <div class="bubble-content">
-                <div class="point"></div>
-                <p>${commList[commList.length-1]}</p>
-             </div>`;
+        }
+    console.out(subTemplate);
     var commentTemplate = 
     `<html>
        <head>
