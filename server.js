@@ -122,21 +122,21 @@ function updateComment(comment){
         }
         colList[k]= col;
     }
-    var subTemplate = `<div class="bubble-list" style="opacity:1">
-             <div class="bubble clearfix">
+    var subTemplate = `<div class="bubble-list">
+             <div class="bubble clearfix"  style="opacity:1">
                 <img src="https://avatars3.githubusercontent.com/u/29298411?v=4&s=400"/>
-             <div class="bubble-content">
+             <div class="bubble-content" >
                 <div class="point"></div>
-                <p>This is the first comment made by Harshith Thota himself.</p>
+                <p  style="opacity:1">This is the first comment made by Harshith Thota himself.</p>
              </div>
     	  `;
     for(var i=0;i<commList.length;i++){
-        subTemplate = subTemplate + `<div class="bubble-list" style="opacity:1">
-             <div class="bubble clearfix">
+        subTemplate = subTemplate + `<div class="bubble-list">
+             <div class="bubble clearfix"  style="opacity:1">
                 <img src=${urlList[Math.round(Math.random()*urlList.length)]} style = "border: 3px solid ${colList[i]};width:80px;height:80px;"/>
              <div class="bubble-content" style = "border: 3px solid ${colList[i]}">
                 <div class="point"></div>
-                <p>${commList[i]}</p>
+                <p  style="opacity:1">${commList[i]}</p>
              </div>`;
         }
     var commentTemplate = 
