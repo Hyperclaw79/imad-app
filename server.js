@@ -108,7 +108,14 @@ function updateComment(comment){
     if(commList.indexOf(newComm) == -1){
         commList.push(newComm);
     }
-    var subTemplate = '';
+    var subTemplate = `<div class="bubble-list">
+             <div class="bubble clearfix">
+                <img src="https://avatars3.githubusercontent.com/u/29298411?v=4&s=400"/>
+             <div class="bubble-content">
+                <div class="point"></div>
+                <p>This is the first comment made by Harshith Thota himself.</p>
+             </div>
+    	  `;
     for(var i=0;i<commList.length;i++){
         
         subTemplate = subTemplate + `<div class="bubble-list">
@@ -119,14 +126,6 @@ function updateComment(comment){
                 <p>${commList[i]}</p>
              </div>`;
         }
-    subTemplate = `<div class="bubble-list">
-             <div class="bubble clearfix">
-                <img src="https://avatars3.githubusercontent.com/u/29298411?v=4&s=400"/>
-             <div class="bubble-content">
-                <div class="point"></div>
-                <p>This is the first comment made by Harshith Thota himself.</p>
-             </div>
-    	  ` + subTemplate;
     var commentTemplate = 
     `<html>
        <head>
