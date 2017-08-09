@@ -125,8 +125,8 @@ function updateComment(comment){
     }
     var subTemplate = `<div class="bubble-list">
              <div class="bubble clearfix">
-                <img src="https://avatars3.githubusercontent.com/u/29298411?v=4&s=400"/ style = "border: 3px solid ${colList[i]};width:80px;height:80px;"/>
-             <div class="bubble-content">
+                <img src="https://avatars3.githubusercontent.com/u/29298411?v=4&s=400"/ style = "border: 3px solid ${colList[i]};width:100px;height:100px;box-shadow:10px 10px 5px rgba(0,0,0,.2);"/>
+             <div class="bubble-content" style = "width:110%;height:110%">
                 <div class="point"></div>
                 <p>This is the first comment made by Harshith Thota himself.</p>
              </div>
@@ -155,13 +155,14 @@ function updateComment(comment){
     			height:80px;
     			border:3px solid #000;
     			border-radius:10px
+    			box-shadow:10px 10px 5px rgba(0,0,0,.2);
             }
     		.bubble-content {
     			position:relative;
     			float:left;
     			margin-top:7px;
     			margin-left:12px;
-    			width:800px;
+    			width:550px;
     			padding:0px 20px;
     			border-radius:10px;
     			background-color:#FFFFFF;
