@@ -126,7 +126,7 @@ function updateComment(comment){
     var subTemplate = `<div class="bubble-list"  style = "width:110%;height:110%;padding-left:5px">
              <div class="bubble clearfix"  style = "padding-top:5px">
                 <img src="https://avatars3.githubusercontent.com/u/29298411?v=4&s=400"/ style = "border: 3px solid ${colList[i]};width:100px;height:100px;box-shadow:10px 10px 5px rgba(0,0,0,.2);"/>
-             <div  style = "padding-top:15px"></div>
+             <div  style = "padding-top:5px"></div>
              <div class="bubble-content">
                 <div class="point"></div>
                 <p>This is the first comment made by Harshith Thota himself.</p>
