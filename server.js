@@ -27,8 +27,8 @@ app.get('/favicon.ico', function (req, res) {
   res.sendFile("https://www.shareicon.net/download/2015/09/24/106441_man.ico");
 });
 
-app.get('/:comm', function (req, res) {
-  var comment = req.params.comm;
+app.get('/submit-comment', function (req, res) {
+  var comment = req.query.comm;
   res.send(updateComment(comment));
 });
 
@@ -131,7 +131,7 @@ function updateComment(comment){
                 <img src="#"/ style = "border: 3px solid ${colList[i]}">
              <div class="bubble-content" style = "border: 3px solid ${colList[i]}">
                 <div class="point"></div>
-                <textarea>${commList[i]}</textarea>
+                <p>${commList[i]}</p>
              </div>`;
         }
     var commentTemplate = 
