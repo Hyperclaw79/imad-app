@@ -98,8 +98,21 @@ function createTemplate(data){
          return htmlTemplate;
 }
 
+var commList = [];
 function updateComment(comment){
     var newComm = comment;
+    commList.push(newComm);
+    var subTemplate = '';
+    for(var i=0;i<commList.length;i++){
+        
+        subTemplate = subTemplate + `<div class="bubble-list">
+             <div class="bubble clearfix">
+                <img src="#"/>
+             <div class="bubble-content">
+                <div class="point"></div>
+                <p>${commList[i]}</p>
+             </div>`;
+        }
     var commentTemplate = 
     `<html>
        <head>
@@ -162,13 +175,7 @@ function updateComment(comment){
                 <div class="point"></div>
                 <p>This is the first comment made by Harshith Thota himself.</p>
              </div>
-    	  <div class="bubble-list">
-             <div class="bubble clearfix">
-                <img src="#"/>
-             <div class="bubble-content">
-                <div class="point"></div>
-                <p>${newComm}</p>
-             </div>   	
+    	  ${subTemplate}   	
        </body>
     </html>`;
     return commentTemplate;
