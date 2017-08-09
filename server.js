@@ -117,8 +117,7 @@ function updateComment(comment){
                 <p>${commList[i]}</p>
              </div>`;
         }
-    console.log(subTemplate);
-    var commentTemplate = 
+    console.log(commList); 
     `<html>
        <head>
           <title>Comments</title>
