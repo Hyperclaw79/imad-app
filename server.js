@@ -105,11 +105,18 @@ function createTemplate(data){
 var commList = [];
 function updateComment(comment){
     var newComm = comment;
+    var colList = [];
     if(commList.indexOf(newComm) == -1){
         commList.push(newComm);
     }
-    var letters = '0123456789ABCDEF';
-    var col = '#';
+    for(var k=0;k<commList.length;k++){
+        var letters = '0123456789ABCDEF';
+        var col = '#';
+        for (var l = 0; l < 6; l++) {
+             col += letters[Math.floor(Math.random() * 16)];
+        }
+        colList[k]= col;
+    }
     var subTemplate = `<div class="bubble-list">
              <div class="bubble clearfix">
                 <img src="https://avatars3.githubusercontent.com/u/29298411?v=4&s=400"/>
@@ -119,14 +126,10 @@ function updateComment(comment){
              </div>
     	  `;
     for(var i=0;i<commList.length;i++){
-        for (var j = 0; j < 6; j++) {
-            col = col + letters[Math.floor(Math.random() * 16)];
-        }    
-    
         subTemplate = subTemplate + `<div class="bubble-list">
              <div class="bubble clearfix">
-                <img src="#"/ style = "border: 3px solid ${col}">
-             <div class="bubble-content" style = "border: 3px solid ${col}">
+                <img src="#"/ style = "border: 3px solid ${colList[i]}">
+             <div class="bubble-content" style = "border: 3px solid ${colList[i]}">
                 <div class="point"></div>
                 <p>${commList[i]}</p>
              </div>`;
