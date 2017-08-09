@@ -123,7 +123,7 @@ function updateComment(comment){
         }
         colList[k]= col;
     }
-    var subTemplate = `<div class="bubble-list" style="padding-left:15%>
+    var subTemplate = `<div class="bubble-list">
              <div class="bubble clearfix">
                 <img src="https://avatars3.githubusercontent.com/u/29298411?v=4&s=400"/ style = "border: 3px solid ${colList[i]};width:80px;height:80px;"/>
              <div class="bubble-content">
