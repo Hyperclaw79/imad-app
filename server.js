@@ -99,7 +99,7 @@ function createTemplate(data){
 }
 
 
-
+var comment = '';
 function updateComment(comment){
     var newComm = comment;
     var commentTemplate = 
