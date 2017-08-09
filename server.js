@@ -24,7 +24,7 @@ app.get('/counter', function (req, res){
 });
 
 app.get('/:comm', function (req, res) {
-  var comment = req.params(comm);
+  var comment = req.params.comm;
   res.send(updateComment(comment));
 });
 
