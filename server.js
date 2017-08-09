@@ -106,7 +106,7 @@ var commList = [];
 function updateComment(comment){
     var newComm = comment;
     commList.push(newComm);
-    var subTemplate = '';
+    /*var subTemplate = '';
     for(var i=0;i<commList.length;i++){
         
         subTemplate = subTemplate + `<div class="bubble-list">
@@ -116,7 +116,8 @@ function updateComment(comment){
                 <div class="point"></div>
                 <p>${commList[i]}</p>
              </div>`;
-        }
+        }*/
+    var subTemplate = commList[commList.length-1];
     var commentTemplate = 
     `<html>
        <head>
