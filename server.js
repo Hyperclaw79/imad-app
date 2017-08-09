@@ -154,6 +154,7 @@ function updateComment(comment){
     		}
     		.bubble {
     			margin-top:20px;
+    			border:3px solid #000;
     		}
     		.point {
     			border-top:10px solid transparent;
