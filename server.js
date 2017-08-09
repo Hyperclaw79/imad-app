@@ -123,7 +123,7 @@ function updateComment(comment){
         }
         colList[k]= col;
     }
-    var subTemplate = `<div class="bubble-list" style = "float:left">
+    var subTemplate = `<div class="bubble-list">
              <div class="bubble clearfix">
                 <img src="https://avatars3.githubusercontent.com/u/29298411?v=4&s=400"/>
              <div class="bubble-content">
@@ -132,12 +132,12 @@ function updateComment(comment){
              </div>
     	  `;
     for(var i=0;i<commList.length;i++){
-        subTemplate = subTemplate + `<div class="bubble-list" style = "float:${floater[Math.ceil(i%2)]}">
+        subTemplate = subTemplate + `<div class="bubble-list">
              <div class="bubble clearfix">
-                <img src=${urlList[Math.round(Math.random()*urlList.length)]} style = "border: 3px solid ${colList[i]};width:80px;height:80px;float:${floater[Math.ceil(i%2)]}"/>
-             <div class="bubble-content" style = "border: 3px solid ${colList[i]};float:${floater[Math.ceil(i%2)]}">
-                <div class="point" style = "float:${floater[Math.ceil(i%2)]}></div>
-                <p style = "float:${floater[Math.ceil(i%2)]}>${commList[i]}</p>
+                <img src=${urlList[Math.round(Math.random()*urlList.length)]} style = "border: 3px solid ${colList[i]};width:80px;height:80px;"/>
+             <div class="bubble-content" style = "border: 3px solid ${colList[i]};">
+                <div class="point"></div>
+                <p>${commList[i]}</p>
              </div>`;
         }
     var commentTemplate = 
