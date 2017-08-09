@@ -23,8 +23,8 @@ app.get('/counter', function (req, res){
   res.send(counter.toString());
 });
 
-app.get('/:comment', function (req, res) {
-  var articleName = req.params.comment;
+app.get('/:comm', function (req, res) {
+  var comment = req.params(comm);
   res.send(updateComment(comment));
 });
 
@@ -98,8 +98,6 @@ function createTemplate(data){
          return htmlTemplate;
 }
 
-
-var comment = '';
 function updateComment(comment){
     var newComm = comment;
     var commentTemplate = 
