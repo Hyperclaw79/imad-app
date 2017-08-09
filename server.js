@@ -151,10 +151,10 @@ function updateComment(comment){
     			border-radius:10px;
     			background-color:#FFFFFF;
     			box-shadow:1px 1px 5px rgba(0,0,0,.2);
+    			border:3px solid #000;
     		}
     		.bubble {
     			margin-top:20px;
-    			border:3px solid #000;
     		}
     		.point {
     			border-top:10px solid transparent;
