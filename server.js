@@ -114,10 +114,16 @@ function updateComment(comment){
                 <img src="#"/>
              <div class="bubble-content">
                 <div class="point"></div>
-                <p>${commList[i]}</p>
+                <p>${commList[commList.length-1]}</p>
              </div>`;
         }*/
-    var subTemplate = commList[commList.length-1];
+    var subTemplate = `<div class="bubble-list">
+             <div class="bubble clearfix">
+                <img src="#"/>
+             <div class="bubble-content">
+                <div class="point"></div>
+                <p>${commList[commList.length-1]}</p>
+             </div>`;
     var commentTemplate = 
     `<html>
        <head>
