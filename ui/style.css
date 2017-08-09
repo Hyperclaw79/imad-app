@@ -90,17 +90,18 @@ p {
   text-decoration: none;
   color: #f00;
   background-color: #000000;
-  border: 5px solid red;
+  border: 2px outset red;
   border-radius: 15px;
-  box-shadow: 0 9px #999;
+  box-shadow: 5px 9px #999;
 }
 
 #commSub:hover {background-color: #444;box-shadow: 0 9px #888}
 
 #commSub:active {
   background-color: #000;
-  box-shadow: 0 5px #666;
+  box-shadow: 5px 5px #666;
   transform: translateY(4px);
+  border: 2px inset red;
 }
 
 /* Set black background color, white text and some padding */
