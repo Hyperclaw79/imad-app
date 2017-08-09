@@ -21,7 +21,7 @@ app.get('/ui/commscript.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'commscript.js'));
 });
 
-var counter = 650;
+var counter = 655;
 app.get('/counter', function (req, res){
   counter = counter + 1;
   res.send(counter.toString());
