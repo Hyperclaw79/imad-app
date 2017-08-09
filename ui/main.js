@@ -14,10 +14,8 @@ request.send(null);
 
 var button = document.getElementById('commSub');
 button.onclick = function(){
-    var comm = document.getElementById('commText').value;
-    var commList = ["Lol","Kek","Hehe"];
-    var list = '';
-    for(var i = 0; i<commList.length;i++){
-        
-    }
+    var commText = document.getElementById('commText').value;
+    var reqC = new XMLHTTPRequest();
+    request.open('POST','http://dragonlordthota717.imad.hasura-app.io/submit-comment', true);
+    request.send(comm=commText);
 };
