@@ -160,7 +160,7 @@ function updateComment(comment){
     		.bubble-content {
     			position:relative;
     			float:left;
-    			margin-top:7px;
+    			margin-top:12px;
     			margin-left:12px;
     			width:550px;
     			padding:0px 20px;
