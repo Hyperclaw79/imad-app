@@ -11,3 +11,13 @@ request.onreadystatechange = function(){
 };
 request.open('GET','http://dragonlordthota717.imad.hasura-app.io/counter', true);
 request.send(null);
+
+var button = document.getElementById('commSub');
+button.onclick = function(){
+    var comm = document.getElementById('commText').value;
+    var commList = ["Lol","Kek","Hehe"];
+    var list = '';
+    for(var i = 0; i<commList.length;i++){
+        
+    }
+};
