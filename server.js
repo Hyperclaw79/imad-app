@@ -126,6 +126,11 @@ function updateComment(comment){
                 <p>${commList[i]}</p>
              </div>`;
         }
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var j = 0; j < 6; j++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }    
     var commentTemplate = 
     `<html>
        <head>
@@ -139,7 +144,7 @@ function updateComment(comment){
     			float:left;
     			width:70px;
     			height:70px;
-    			border:3px solid #000;
+    			border:3px solid color;
     			border-radius:10px
             }
     		.bubble-content {
@@ -151,7 +156,7 @@ function updateComment(comment){
     			border-radius:10px;
     			background-color:#FFFFFF;
     			box-shadow:1px 1px 5px rgba(0,0,0,.2);
-    			border:3px solid #000;
+    			border:3px solid color;
     		}
     		.bubble {
     			margin-top:20px;
