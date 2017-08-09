@@ -83,11 +83,6 @@ p {
 
 /* Set black background color, white text and some padding */
 footer {
-  background-color: #555;
-  color: white;
-  padding: 15px;
-}
-.container-fluid text-center footer {
   margin: 30px;
   background-color: #ffffff;
   border: 1px solid black;
