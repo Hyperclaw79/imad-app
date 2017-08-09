@@ -160,7 +160,7 @@ function updateComment(comment){
     			position:relative;
     			float:left;
     			margin-left:12px;
-    			width:400px;
+    			width:350px;
     			padding:0px 20px;
     			border-radius:10px;
     			background-color:#FFFFFF;
