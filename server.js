@@ -107,11 +107,15 @@ function createTemplate(data){
 }
 
 var commList = [];
+var urlList = ["https://www.sideshowtoy.com/wp-content/uploads/2016/04/captain-america-civil-war-iron-man-xlvi-sixth-scale-marvel-feature-902708.jpg","http://themepack.me/i/c/749x468/media/g/149/iron-man-theme-1.jpg","https://www.sideshowtoy.com/photo_902622_thumb.jpg","http://worldversus.com/img/ironman.jpg","https://www.sideshowtoy.com/assets/products/400310-iron-man-mark-iii/lg/marvel-iron-man-mark-3-life-size-figure-400310-08.jpg","https://s-media-cache-ak0.pinimg.com/736x/52/08/ac/5208ac301eb3fb378dc6b69a5e94c6ec--marvel-heroes-marvel-dc.jpg","https://images-na.ssl-images-amazon.com/images/G/01/DVD/Paramount/detailpages/IronMan/IronMan_Still_H5_L.jpg","https://ctd-thechristianpost.netdna-ssl.com/en/full/30892/iron-man-4.jpg","https://s-media-cache-ak0.pinimg.com/736x/5d/99/cd/5d99cdab52c1afda4af0b97a116dbda0--comic-art-comic-book.jpg","https://s-media-cache-ak0.pinimg.com/736x/8b/b1/60/8bb160c9f3b45906ef8ffab6ac972870--marvel-dc-comics-avengers-marvel.jpg"];
 function updateComment(comment){
     var newComm = comment;
     var colList = [];
     if(commList.indexOf(newComm) == -1){
         commList.push(newComm);
+    }
+    if(urlList === []){
+        urlList = ["https://www.sideshowtoy.com/wp-content/uploads/2016/04/captain-america-civil-war-iron-man-xlvi-sixth-scale-marvel-feature-902708.jpg","http://themepack.me/i/c/749x468/media/g/149/iron-man-theme-1.jpg","https://www.sideshowtoy.com/photo_902622_thumb.jpg","http://worldversus.com/img/ironman.jpg","https://www.sideshowtoy.com/assets/products/400310-iron-man-mark-iii/lg/marvel-iron-man-mark-3-life-size-figure-400310-08.jpg","https://s-media-cache-ak0.pinimg.com/736x/52/08/ac/5208ac301eb3fb378dc6b69a5e94c6ec--marvel-heroes-marvel-dc.jpg","https://images-na.ssl-images-amazon.com/images/G/01/DVD/Paramount/detailpages/IronMan/IronMan_Still_H5_L.jpg","https://ctd-thechristianpost.netdna-ssl.com/en/full/30892/iron-man-4.jpg","https://s-media-cache-ak0.pinimg.com/736x/5d/99/cd/5d99cdab52c1afda4af0b97a116dbda0--comic-art-comic-book.jpg","https://s-media-cache-ak0.pinimg.com/736x/8b/b1/60/8bb160c9f3b45906ef8ffab6ac972870--marvel-dc-comics-avengers-marvel.jpg"];
     }
     for(var k=0;k<commList.length;k++){
         var letters = '0123456789ABCDEF';
@@ -132,7 +136,7 @@ function updateComment(comment){
     for(var i=0;i<commList.length;i++){
         subTemplate = subTemplate + `<div class="bubble-list">
              <div class="bubble clearfix">
-                <img src="#"/ style = "border: 3px solid ${colList[i]}">
+                <img src=${urlList.pop(Math.round(Math.random()*urlList.length))} style = "border: 3px solid ${colList[i]};width:80px;height:80px;"/>
              <div class="bubble-content" style = "border: 3px solid ${colList[i]}">
                 <div class="point"></div>
                 <p>${commList[i]}</p>
