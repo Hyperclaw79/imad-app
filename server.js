@@ -105,7 +105,9 @@ function createTemplate(data){
 var commList = [];
 function updateComment(comment){
     var newComm = comment;
-    commList.push(newComm);
+    if(commList.indexOf(newComm) == -1){
+        commList.push(newComm);
+    }
     var subTemplate = '';
     for(var i=0;i<commList.length;i++){
         
