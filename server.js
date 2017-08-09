@@ -100,8 +100,8 @@ function createTemplate(data){
 
 
 
-function updateComment(data){
-    var newComm = data.comment;
+function updateComment(comment){
+    var newComm = comment;
     var commentTemplate = 
     `<html>
        <head>
