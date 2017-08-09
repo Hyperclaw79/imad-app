@@ -13,8 +13,8 @@ function loader(){
     request.open('GET','http://dragonlordthota717.imad.hasura-app.io/counter', true);
     request.send(null);
 }
-var button = document.getElementById('commSub');
-button.onclick = function(){
+var sub = document.getElementById('commSub');
+sub.onclick = function(){
     var commText = document.getElementById('commText').value;
     var reqC = new XMLHttpRequest();
     url = 'http://dragonlordthota717.imad.hasura-app.io/submit-comment?comm='+commText;
