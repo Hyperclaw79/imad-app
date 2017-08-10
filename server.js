@@ -209,7 +209,7 @@ function updateComment(comment){
         <meta charset="utf-8">
        </head>
        <body onload = reloader()>
-          <div style="margin: 30px;background-color: rgba(255, 255, 255, 0.4);border: 3px solid black;box-shadow:10px 10px 5px rgba(0,0,0,.2);border-radius:10px;"><h1 style="text-shadow: 3px 3px 5px blue;color:red;">Here is the anonymous comment feed:</h1></div>
+          <div style="margin: 30px;background-color: rgba(255, 255, 255, 0.4);border: 3px solid black;box-shadow:10px 10px 5px rgba(0,0,0,.2);border-radius:10px;"><h1 style="text-shadow: 3px 3px 5px blue;">Here is the anonymous comment feed:</h1></div>
           <div style="margin: 30px;background-color: rgba(255, 255, 255, 0.4);border: 5px solid black;box-shadow:10px 10px 5px rgba(0,0,0,.2);border-radius:10px;">
           ${subTemplate}
           </div>
