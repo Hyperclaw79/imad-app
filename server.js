@@ -88,6 +88,7 @@ function createTemplate(data){
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 <meta name = "author" content = "Harshith Thota"/>
                 <meta charset="utf-8">
+                <link rel="shortcut icon" href="https://www.shareicon.net/download/2015/09/24/106441_man.ico" type="image/x-icon" />
                 <title>
                     ${title}
                 </title>    
@@ -196,6 +197,11 @@ function updateComment(comment){
     				height: 1%;
     				}
     	</style>
+    	<link rel="shortcut icon" href="https://www.shareicon.net/download/2015/09/24/106441_man.ico" type="image/x-icon" />
+    	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name = "author" content = "Harshith Thota"/>
+        <meta charset="utf-8">
        </head>
        <body>
           <div style="margin: 30px;background-color: rgba(255, 255, 255, 0.4);border: 3px solid black;box-shadow:10px 10px 5px rgba(0,0,0,.2);border-radius:10px;"><h1 style="text-shadow: 3px 3px 5px blue;">Here is the anonymous comment feed:</h1></div>
