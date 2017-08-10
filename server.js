@@ -205,7 +205,7 @@ function updateComment(comment){
        </head>
        <body>
           <script>
-              setInterval(function(){$(document.body).load(location.href +  ' body');},1000)
+              setInterval(function(){$('#commcust').load(location.href +  ' #commcust');},1000)
           </script>
           <div style="margin: 30px;background-color: rgba(255, 255, 255, 0.4);border: 3px solid black;box-shadow:10px 10px 5px rgba(0,0,0,.2);border-radius:10px;"><h1 style="text-shadow: 3px 3px 5px blue;">Here is the anonymous comment feed:</h1></div>
           <div id = 'commcust' style="margin: 30px;background-color: rgba(255, 255, 255, 0.4);border: 5px solid black;box-shadow:10px 10px 5px rgba(0,0,0,.2);border-radius:10px;">
