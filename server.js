@@ -215,12 +215,9 @@ function updateComment(comment){
             $(document).ready(setInterval(function(){location.reload();},20000));
           </script>
           <div id="header" style="margin: 30px;background-color: rgba(255, 255, 255, 0.4);border: 3px solid black;box-shadow:10px 10px 5px rgba(0,0,0,.2);border-radius:10px;"><h1 style="text-shadow: 3px 3px 5px blue;">Here is the anonymous comment feed:</h1></div>
-          <div id = "commcust" style="margin: 30px;background-color: rgba(255, 255, 255, 0.4);border: 5px solid black;box-shadow:10px 10px 5px rgba(0,0,0,.2);border-radius:10px;display:table;>
+          <div id = "commcust" style="margin: 30px;background-color: rgba(255, 255, 255, 0.4);border: 5px solid black;box-shadow:10px 10px 5px rgba(0,0,0,.2);border-radius:10px;display:table;width:-webkit-fill-available>
             ${subTemplate}
           </div>
-          <script>
-            document.getElementById("commcust").width = document.getElementById("header").width
-          </script>
        </body>
     </html>`;
     return commentTemplate;
