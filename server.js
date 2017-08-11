@@ -194,7 +194,7 @@ function updateComment(comment){
     			line-height:
     		}
     		.clearfix {
-    			display: table-row;
+    			display: inline-block;
     		}
     		* html .clearfix {
     				height: 1%;
