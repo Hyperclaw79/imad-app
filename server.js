@@ -210,18 +210,8 @@ function updateComment(comment){
           <script>
             $(document).ready(setInterval(function(){location.reload();},20000));
           </script>
-          <script>
-            var elementPosition = $('#commcust').offset();
-            $(window).scroll(function(){
-                if($(window).scrollTop() > elementPosition.top){
-                    $('#commcust').css('position','fixed').css('top','0');
-                } else {
-                    $('#comcust').css('position','static');
-                }    
-            });
-            </script>
           <div style="margin: 30px;background-color: rgba(255, 255, 255, 0.4);border: 3px solid black;box-shadow:10px 10px 5px rgba(0,0,0,.2);border-radius:10px;"><h1 style="text-shadow: 3px 3px 5px blue;">Here is the anonymous comment feed:</h1></div>
-          <div id = "commcust" style="margin: 30px;background-color: rgba(255, 255, 255, 0.4);border: 5px solid black;box-shadow:10px 10px 5px rgba(0,0,0,.2);border-radius:10px;background-size: cover;background-repeat: no-repeat;background-attachment: fixed;">
+          <div id = "commcust" style="margin: 30px;background-color: rgba(255, 255, 255, 0.4);border: 5px solid black;box-shadow:10px 10px 5px rgba(0,0,0,.2);border-radius:10px;overlow:auto;">
           ${subTemplate}
           </div>
        </body>
