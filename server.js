@@ -195,6 +195,7 @@ function updateComment(comment){
     		}
     		.clearfix {
     			display: inline-block;
+    			margin-right: 5px
     		}
     		* html .clearfix {
     				height: 1%;
