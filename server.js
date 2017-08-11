@@ -159,7 +159,8 @@ function updateComment(comment){
     			width:80px;
     			height:80px;
     			border:3px solid #000;
-    			border-radius:10px
+    			border-radius:10px;
+    			margin-bottom: 5px;
             }
     		.bubble-content {
     			position:relative;
