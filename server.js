@@ -219,8 +219,7 @@ function updateComment(comment){
             ${subTemplate}
           </div>
           <script>
-            document.getElementById("commcust").width = document.getElementById("header").offsetWidth;
-            document.getElementById("header").width = document.getElementById("commcust").width;
+            document.getElementById("commcust").width = document.getElementById("header").width
           </script>
        </body>
     </html>`;
