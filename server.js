@@ -176,6 +176,7 @@ function updateComment(comment){
     		}
     		.bubble {
     			margin-top:20px;
+    			margin-right: 5px
     		}
     		.point {
     			border-top:10px solid transparent;
