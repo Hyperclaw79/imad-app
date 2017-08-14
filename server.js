@@ -48,35 +48,24 @@ app.get('/ui/commscript.js', function (req, res) {
 });
 
 var counter = 0;
-app.get('/counter', function rep(req, res){
-  pool.query("SELECT pageviews FROM users where name='Hyperclaw79'",function(err,result){
-    if(err){
-        res.status(500).send(err.toString());
-    }
-    else{
-        counter = result.rows[0];
-        }
-  });
-  function inc (data){
-      var cnt = data.pageviews;
-      cnt = parseInt(cnt)+1;
-      return cnt; //.toString();
+app.get('/counter', function (req, res){
+  pool.query("SELECT pageviews FROM users where name='Hyperclaw79'",function(err,result){counter = result.rows[0];});
+  var cnt = counter.pageviews;
+  cnt = parseInt(cnt)+1;
+  if(isNaN(cnt)){
+      return res.status(401).send('NaN returned.');
   }
-  var inc_cnt = inc(counter).toString();
-  if(parseInt(inc_cnt)>800){
+  else if(cnt>800){
       pool.query("UPDATE users SET pageviews = $1 WHERE name = 'Hyperclaw79'",[inc_cnt],function(err){
         if(err){
-            res.status(500).send(err.toString());
-        }
-        else{
-            console.log('Successfully Incremented Counter.');
+            return res.status(500).send(err.toString());
         }
       });
   }
   else{
-      res.send("something's wrong");
+      return res.send("something's wrong");
   }
-  return res.send(inc_cnt);
+  return res.send(cnt.toString());
 });
 
 app.get('/submit-comment', function (req, res) {
