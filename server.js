@@ -3,6 +3,8 @@ var morgan = require('morgan');
 var path = require('path');
 var app = express();
 app.use(morgan('combined'));
+app.use(app.router);
+app.use(express.static(__dirname + '/static'));
 var crypto = require('crypto');
 
 var Pool = require('pg').Pool;
@@ -49,7 +51,9 @@ app.get('/ui/commscript.js', function (req, res) {
 
 var counter = 0;
 var debug_var = 0;
-app.get('/counter', function rep(req, res){
+app.get('/counter', function rep(req, res, next){
+  res.setHeader('Last-Modified', (new Date()).toUTCString());
+  next();    
   pool.query("SELECT pageviews FROM users where name='Hyperclaw79'",function(err,result){
     if(err){
         res.status(500).send(err.toString());
