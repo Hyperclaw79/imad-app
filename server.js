@@ -52,7 +52,7 @@ var flag = "From server.js";
 app.get('/counter', function (req, res){
   pool.query("SELECT pageviews FROM users WHERE name='Hyperclaw79'",function(err,result){
       if(err){
-        return res.status(500).send("Flag \n"+err.toString());  
+        res.status(500).send("Flag \n"+err.toString());  
       }
       else{
         counter = result.rows[0];
