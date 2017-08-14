@@ -52,7 +52,7 @@ var flag = "From server.js";
 app.get('/counter', function (req, res){
   pool.query("SELECT pageviews FROM users WHERE name='Hyperclaw79'",function(err,result){
       if(err){
-        res.status(500).send("Flag \n"+err.toString());  
+        res.status(500).send("Flag: \n"+err.toString());  
       }
       else{
         counter = result.rows[0];
@@ -61,9 +61,9 @@ app.get('/counter', function (req, res){
   });
   var cnt = counter.pageviews;
   cnt = parseInt(cnt)+1;
-  if(isNaN(cnt)) res.status(500).send(flag+', returned NaN as seen in: '+JSON.stringify(counter));
+  if(isNaN(cnt)) res.status(500).send(flag+':\nreturned NaN as seen in: '+JSON.stringify(counter));
   else pool.query("UPDATE users SET pageviews = $1 WHERE name = 'Hyperclaw79'",[cnt]);
-  return res.send(flag + cnt.toString());
+  return res.send(flag +":\n" + cnt.toString());
 });
 
 app.get('/submit-comment', function (req, res) {
