@@ -52,8 +52,13 @@ app.get('/counter', function (req, res){
         counter = JSON.stringify(result.rows[0]);
     }
   });
+  function inc (data){
+      var cnt = data.pageviews;
+      cnt = parseInt(cnt)+1;
+      return cnt.toString();
+  }
   //counter = counter + 1;
-  res.send(counter);
+  res.send(inc(counter));
   /*pool.query(`UPDATE "users" SET "pageviews" = $1 WHERE "name" = 'Hyperclaw79';`,[counter],function(err,result){
     if(err){
         res.status(500).send(err.toString());
