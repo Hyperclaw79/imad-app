@@ -42,10 +42,26 @@ app.get('/ui/commscript.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'commscript.js'));
 });
 
-var counter = 708;
+var counter = 0;
 app.get('/counter', function (req, res){
+  pool.query("SELECT pageviews FROM users where name='Hyperclaw79'",function(err,result){
+    if(err){
+        res.status(500).send(err.toString());
+    }
+    else{
+        counter = result.rows[0];
+    }
+  });
   counter = counter + 1;
   res.send(counter.toString());
+  pool.query(`UPDATE "users" SET "pageviews" = $1 WHERE "name" = 'Hyperclaw79';`,[counter],function(err,result){
+    if(err){
+        res.status(500).send(err.toString());
+    }
+    else{
+        counter = result.rows[0];
+    }
+  });
 });
 
 app.get('/favicon.ico', function (req, res) {
