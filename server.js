@@ -60,27 +60,13 @@ app.get('/counter', function (req, res){
   function inc (data){
       var cnt = data.pageviews;
       cnt = parseInt(cnt)+1;
-      if(isNaN(cnt)){
-        pool.query("SELECT pageviews FROM users where name='Hyperclaw79'",function(err,result){
-        if(err){
-            res.status(500).send(err.toString());
-        }
-        else{
-            counter = result.rows[0];
-            }
-        });
-        cnt = data.pageviews;
-        cnt = parseInt(cnt)+1;
-      }
-      else{
-          return cnt; //.toString();
-      }
+      return cnt; //.toString();
   }
   var inc_cnt = inc(counter).toString();
   res.send(inc_cnt);
   console.log(inc_cnt);
   if(parseInt(inc_cnt)>800){
-      pool.query("UPDATE users SET pageviews = $1 WHERE name = 'Hyperclaw79'",[parseInt(inc_cnt)],function(err){
+      pool.query("UPDATE users SET pageviews = $1 WHERE name = 'Hyperclaw79'",[inc_cnt],function(err){
         if(err){
             res.status(500).send(err.toString());
         }
