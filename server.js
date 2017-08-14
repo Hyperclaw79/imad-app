@@ -49,7 +49,7 @@ app.get('/counter', function (req, res){
         res.status(500).send(err.toString());
     }
     else{
-        counter = result.rows[0]; //JSON.stringify(result.rows[0]);
+        counter = JSON.stringify(result.rows[1]);
     }
   });
   //counter = counter + 1;
