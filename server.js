@@ -76,7 +76,7 @@ app.get('/counter', function (req, res){
       });
   }
   else{
-      console.log("something's wrong");
+      res.send("something's wrong");
   }
 });
 
