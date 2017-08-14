@@ -58,7 +58,7 @@ app.get('/counter', function (req, res){
       return cnt; //.toString();
   }
   //counter = counter + 1;
-  res.send(Object.keys(counter)[1]);
+  res.send(Object.keys(counter)[0]);
   /*pool.query(`UPDATE "users" SET "pageviews" = $1 WHERE "name" = 'Hyperclaw79';`,[counter],function(err,result){
     if(err){
         res.status(500).send(err.toString());
