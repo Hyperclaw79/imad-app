@@ -60,7 +60,21 @@ app.get('/counter', function (req, res){
   function inc (data){
       var cnt = data.pageviews;
       cnt = parseInt(cnt)+1;
-      return cnt; //.toString();
+      if(isNan(cnt)){
+        pool.query("SELECT pageviews FROM users where name='Hyperclaw79'",function(err,result){
+        if(err){
+            res.status(500).send(err.toString());
+        }
+        else{
+            counter = result.rows[0];
+            }
+        });
+        cnt = data.pageviews;
+        cnt = parseInt(cnt)+1;
+      }
+      else{
+          return cnt; //.toString();
+      }
   }
   var inc_cnt = inc(counter).toString();
   res.send(inc_cnt);
