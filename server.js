@@ -54,8 +54,8 @@ app.get('/counter', function (req, res){
   });
   function inc (data){
       var cnt = data.pageviews;
-      cnt = parseInt(cnt)+1;
-      return cnt.toString();
+      //cnt = parseInt(cnt)+1;
+      return cnt; //.toString();
   }
   //counter = counter + 1;
   res.send(inc(counter));
