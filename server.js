@@ -50,13 +50,8 @@ app.get('/counter', function (req, res){
         res.status(500).send(err.toString());
     }
     else{
-        if(resut.rows[0]==='NaN'){
-            location.reload();
+        counter = result.rows[0];
         }
-        else{
-            counter = result.rows[0];
-        }
-    }
   });
   function inc (data){
       var cnt = data.pageviews;
