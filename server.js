@@ -53,21 +53,20 @@ app.get('/counter', function (req, res){
     }
   });
   function inc (data){
-      var cnt = data["pageviews"];
-      //cnt = parseInt(cnt)+1;
+      var cnt = data.pageviews;
+      cnt = parseInt(cnt)+1;
       return cnt; //.toString();
   }
-  //counter = counter + 1;
-  var pv = Object.keys(counter)[0];
-  res.send(counter.pv);
-  /*pool.query(`UPDATE "users" SET "pageviews" = $1 WHERE "name" = 'Hyperclaw79';`,[counter],function(err,result){
+  var inc_cnt = inc(counter).toString();
+  res.send(inc_cnt);
+  pool.query("UPDATE users SET pageviews = $1 WHERE name = 'Hyperclaw79'",[inc_cnt],function(err){
     if(err){
         res.status(500).send(err.toString());
     }
     else{
-        counter = result.rows[0];
+        console.log('Successfully Incremented Counter.');
     }
-  });*/
+  });
 });
 
 app.get('/favicon.ico', function (req, res) {
