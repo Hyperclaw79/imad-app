@@ -53,12 +53,12 @@ app.get('/counter', function (req, res){
   var cnt = counter.pageviews;
   cnt = parseInt(cnt)+1;
   if(isNaN(cnt)){
-      return res.status(401).send('NaN returned.');
+      res.status(500).send('NaN returned.');
   }
   else if(cnt>800){
       pool.query("UPDATE users SET pageviews = $1 WHERE name = 'Hyperclaw79'",[cnt],function(err){
         if(err){
-            return res.status(500).send(err.toString());
+            res.status(500).send(err.toString());
         }
       });
   }
