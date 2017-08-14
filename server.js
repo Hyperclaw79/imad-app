@@ -76,7 +76,7 @@ app.get('/counter', function rep(req, res){
   else{
       res.send("something's wrong");
   }
-  res.send(inc_cnt);
+  return res.send(inc_cnt);
 });
 
 app.get('/submit-comment', function (req, res) {
