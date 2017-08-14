@@ -50,9 +50,9 @@ app.get('/ui/commscript.js', function (req, res) {
 var counter = {"pageviews":800};
 var flag = "From server.js";
 app.get('/counter', function (req, res){
-  pool.query("SELECT pageviews FROM users where name='Hyperclaw79'",function(err,result){
+  pool.query("SELECT pageviews FROM users WHERE name='Hyperclaw79'",function(err,result){
       if(err){
-        return res.status(500).send(err.toString());  
+        return res.status(500).send("Flag \n"+err.toString());  
       }
       else{
         counter = result.rows[0];
