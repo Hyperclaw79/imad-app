@@ -49,6 +49,7 @@ app.get('/counter', function (req, res){
         res.status(500).send(err.toString());
     }
     else{
+        console.log(result);
         counter = result.rows[0];
     }
   });
