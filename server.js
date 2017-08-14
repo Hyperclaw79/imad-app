@@ -58,6 +58,14 @@ app.get('/counter', function rep(req, res){
         counter = result.rows[0];
         }
   });
+  pool.query("SELECT pageviews FROM users where name='Hyperclaw79'",function(err,result){
+    if(err){
+        res.status(500).send(err.toString());
+    }
+    else{
+        counter = result.rows[0];
+        }
+  });
   function inc (data){
       var cnt = data.pageviews;
       cnt = parseInt(cnt)+1;
