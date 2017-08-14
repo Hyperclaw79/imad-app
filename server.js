@@ -20,7 +20,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/favicon.ico', function (req, res) {
-  res.sendFile("https://www.shareicon.net/download/2015/09/24/106441_man.ico");
+  res.sendFile(path.join(__dirname, 'ui', 'man.ico'));
 });
 
 app.get('/userlist', function(req,res){
