@@ -66,7 +66,7 @@ app.get('/counter', function (req, res){
   res.send(inc_cnt);
   console.log(inc_cnt);
   if(parseInt(inc_cnt)>800){
-      pool.query("UPDATE users SET pageviews = $1 WHERE name = 'Hyperclaw79'",[inc_cnt],function(err){
+      pool.query("UPDATE users SET pageviews = $1 WHERE name = 'Hyperclaw79'",[parseInt(inc_cnt)],function(err){
         if(err){
             res.status(500).send(err.toString());
         }
