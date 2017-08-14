@@ -56,7 +56,7 @@ app.get('/counter', function (req, res){
       return res.status(401).send('NaN returned.');
   }
   else if(cnt>800){
-      pool.query("UPDATE users SET pageviews = $1 WHERE name = 'Hyperclaw79'",[inc_cnt],function(err){
+      pool.query("UPDATE users SET pageviews = $1 WHERE name = 'Hyperclaw79'",[cnt],function(err){
         if(err){
             return res.status(500).send(err.toString());
         }
