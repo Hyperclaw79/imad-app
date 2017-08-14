@@ -19,6 +19,10 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+app.get('/favicon.ico', function (req, res) {
+  res.sendFile("https://www.shareicon.net/download/2015/09/24/106441_man.ico");
+});
+
 app.get('/userlist', function(req,res){
     
     pool.query('SELECT name FROM users',function(err,result){
@@ -74,10 +78,6 @@ app.get('/counter', function (req, res){
   else{
       location.reload();
   }
-});
-
-app.get('/favicon.ico', function (req, res) {
-  res.sendFile("https://www.shareicon.net/download/2015/09/24/106441_man.ico");
 });
 
 app.get('/submit-comment', function (req, res) {
