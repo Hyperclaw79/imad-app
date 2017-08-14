@@ -60,14 +60,14 @@ app.get('/counter', function (req, res){
   }
   var inc_cnt = inc(counter).toString();
   res.send(inc_cnt);
-  pool.query("UPDATE users SET pageviews = $1 WHERE name = 'Hyperclaw79'",[inc_cnt],function(err){
+  /*pool.query("UPDATE users SET pageviews = $1 WHERE name = 'Hyperclaw79'",[inc_cnt],function(err){
     if(err){
         res.status(500).send(err.toString());
     }
     else{
         console.log('Successfully Incremented Counter.');
     }
-  });
+  });*/
 });
 
 app.get('/favicon.ico', function (req, res) {
