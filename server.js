@@ -49,10 +49,10 @@ app.get('/counter', function (req, res){
         res.status(500).send(err.toString());
     }
     else{
-        counter = result;
+        counter = JSON.stringify(result);
     }
   });
-  counter = counter + 1;
+  //counter = counter + 1;
   res.send(counter.toString());
   /*pool.query(`UPDATE "users" SET "pageviews" = $1 WHERE "name" = 'Hyperclaw79';`,[counter],function(err,result){
     if(err){
