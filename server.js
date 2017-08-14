@@ -49,6 +49,7 @@ app.get('/ui/commscript.js', function (req, res) {
 
 var counter = 0;
 app.get('/counter', function (req, res){
+  location.reload();    
   pool.query("SELECT pageviews FROM users where name='Hyperclaw79'",function(err,result){
     if(err){
         res.status(500).send(err.toString());
