@@ -47,8 +47,8 @@ app.get('/ui/commscript.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'commscript.js'));
 });
 
+var counter = 0;
 app.get('/counter', function (req, res){
-  var counter = 0;
   pool.query("SELECT pageviews FROM users where name='Hyperclaw79'",function(err,result){
     if(err){
         res.status(500).send(err.toString());
