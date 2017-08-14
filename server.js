@@ -48,7 +48,8 @@ app.get('/ui/commscript.js', function (req, res) {
 });
 
 var counter = 0;
-app.get('/counter', function (req, res){
+var debug_var = 0;
+app.get('/counter', function rep(req, res){
   pool.query("SELECT pageviews FROM users where name='Hyperclaw79'",function(err,result){
     if(err){
         res.status(500).send(err.toString());
@@ -65,12 +66,17 @@ app.get('/counter', function (req, res){
   var inc_cnt = inc(counter).toString();
   res.send(inc_cnt);
   console.log(inc_cnt);
-  if(parseInt(inc_cnt)>800){
+  if(parseInt(inc_cnt)===debug_var){
+      res.send("Need to reinvoke.");
+      rep(res,req);
+  }
+  else if(parseInt(inc_cnt)>800){
       pool.query("UPDATE users SET pageviews = $1 WHERE name = 'Hyperclaw79'",[inc_cnt],function(err){
         if(err){
             res.status(500).send(err.toString());
         }
         else{
+            debug_var = parseInt(inc_cnt);
             console.log('Successfully Incremented Counter.');
         }
       });
