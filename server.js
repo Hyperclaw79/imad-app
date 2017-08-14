@@ -3,7 +3,6 @@ var morgan = require('morgan');
 var path = require('path');
 var app = express();
 app.use(morgan('combined'));
-app.use(app.router);
 app.use(express.static(__dirname + '/static'));
 var crypto = require('crypto');
 
