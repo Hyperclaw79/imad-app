@@ -63,7 +63,7 @@ app.get('/counter', function (req, res){
   cnt = parseInt(cnt)+1;
   if(isNaN(cnt)) res.status(500).send(flag+', returned NaN as seen in: '+JSON.stringify(counter));
   else pool.query("UPDATE users SET pageviews = $1 WHERE name = 'Hyperclaw79'",[cnt]);
-  return res.send(cnt.toString());
+  return res.send(flag + cnt.toString());
 });
 
 app.get('/submit-comment', function (req, res) {
