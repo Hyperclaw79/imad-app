@@ -27,6 +27,7 @@ nav div {
   right:85px;
   height: 50px;
   width: 75px;
+  z-index: 98;
 }
 
 form {
