@@ -18,9 +18,6 @@
 nav div {
   margin: 0 5px 0 5px;
   background-color: #F00;
-  position: fixed;
-  top:0;
-  right:0;
 }
 
 .dropbtn{
