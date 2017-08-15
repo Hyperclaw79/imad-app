@@ -80,20 +80,18 @@ app.get('/submit-comment', function (req, res) {
         for(var m = 0; m < result.rows.length;m++){
             comm_List[m]=result.rows[m].comment;
         }
-        var temp = comm_List.filter(function(elem, index, self) {
-            return index == self.indexOf(elem);
-        });
-        comm_List = temp;
-        pool.query('INSERT INTO "comments" ( "comment") VALUES ($1);',[comment],function(err,result){
-            if(err){
-                res.status(500).send(err.toString());
-            }
-            else{
-                res.send(updateComment(comm_List));
-            }
-        });
+        if(comm_List.indexOf(comment)==-1){
+            pool.query('INSERT INTO "comments" ( "comment") VALUES ($1);',[comment],function(err,result){
+                if(err){
+                    res.status(500).send(err.toString());
+                }
+                else{
+                    res.send(updateComment(comm_List));
+                }
+            });
         }
-    });
+    }
+  });
   //res.send(updateComment(comment));
 });
 
