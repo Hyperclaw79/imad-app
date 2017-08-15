@@ -109,14 +109,46 @@ app.get('/hash/:input',function(req,res){
 app.post('/create_account',function(req,res){
     var username = req.body.username;
     var password = req.body.password;
-    var salt = crypto.randomBytes(128).toString('hex');
-    var hashedPwd = hash(password,salt);
-    pool.query('INSERT INTO "users" (username,password) VALUES ($1, $2)',[username,hashedPwd],function(err,result){
+    pool.query('SELECT (username,password) FROM "users" WHERE "username" = $1',[username],function(err,result){
+        if(err){
+            var salt = crypto.randomBytes(128).toString('hex');
+            var hashedPwd = hash(password,salt);
+            pool.query('INSERT INTO "users" (username,password) VALUES ($1, $2)',[username,hashedPwd],function(err,result){
+                if(err){
+                    res.status(500).send(err.toString());
+                }
+                else{
+                    res.send("Account succesfully created with the username: "+username);
+                }
+            });
+        }
+        else{
+            res.status(403).send('Account already exists. Please Login.');
+        }
+});
+
+app.post('/login',function(req,res){
+    var username = req.body.username;
+    var password = req.body.password;
+    pool.query('SELECT (username,password) FROM "users" WHERE "username" = $1',[username],function(err,result){
         if(err){
             res.status(500).send(err.toString());
         }
         else{
-            res.send("Account succesfully created with the username: "+username);
+            if(result.rows.length===0){
+                res.status(403).send('Account does not exist. Please Register.');
+            }
+            else{
+                var hashedPwd = result.rows[0].paasword;
+                var salt = hashedPwd.split('$')[2];
+                var saltyPwd = hash(password,salt);
+                if(saltyPwd===hashedPwd){
+                    res.send('Succesfully Logged in.');
+                }
+                else{
+                    res.status(403).send('<h2>Incorrect Password. Please try again.</h2><p>Password is case sensitive.</p>');
+                }
+            }
         }
     });
 });
