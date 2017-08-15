@@ -44,6 +44,8 @@ form {
   border-bottom-color: rgba(60,60,60,.4);
   border-right-color: rgba(60,60,60,.4);
   box-shadow: 10px 10px 5px #000;
+  -webkit-clip-path:circle(150% at top right);
+  clip-path:circle(150% at top right);
 }
 
 form input.username, input.pass {
