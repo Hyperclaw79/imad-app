@@ -15,6 +15,15 @@
 	display: none;
 }
 
+.dropbtn{
+  margin: 10px;
+  float: right;
+  height: 28px;
+  width: 50px;
+  border: 1px solid #27ae60;
+  border-radius: 5px;
+}
+
 /* Remove the navbar's default margin-bottom and rounded borders */
 .navbar {
   margin-bottom: 0;
