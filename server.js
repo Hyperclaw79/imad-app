@@ -81,7 +81,11 @@ app.get('/submit-comment', function (req, res) {
                     res.status(500).send(err.toString());
                 }
                 else{
-                    res.send(result.rows);
+                    var commLst = [];
+                    for(var m = 0; m< result.rows.length;i++){
+                        commList[m]=result.rows[m].comment;
+                    }
+                    res.send(commList);
                 }
             });
         }
