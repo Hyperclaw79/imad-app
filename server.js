@@ -6,6 +6,11 @@ app.use(morgan('combined'));
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
+var session = require('express-session');
+app.use(session({
+    secret: 'ChangeMeSenpai',
+    cookie: {maxAge: 1000 * 60 * 60 * 24 * 30}
+}));
 
 var Pool = require('pg').Pool;
 var config = {
@@ -153,6 +158,7 @@ app.post('/login',function(req,res){
                 var salt = hashedPwd.split('$')[2];
                 var saltyPwd = hash(password,salt);
                 if(saltyPwd===hashedPwd){
+                    req.session.auth = {userId: result.rows[0].id};
                     res.send('Succesfully Logged in.');
                 }
                 else{
