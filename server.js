@@ -125,6 +125,7 @@ app.post('/create_account',function(req,res){
         else{
             res.status(403).send('Account already exists. Please Login.');
         }
+    });
 });
 
 app.post('/login',function(req,res){
