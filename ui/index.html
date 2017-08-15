@@ -100,7 +100,9 @@ function play_oh(){
     }
     function hide_form(){
         var loginForm = document.getElementById('loginForm');
-        loginForm.style.display = "none";
+        setTimeout(function(){
+            loginForm.style.display = "none";
+        },10000);
     }
 </script>
 <input type="image" src = "http://orig00.deviantart.net/f2e7/f/2016/134/1/0/j_a_r_v_i_s_ui_by_drkdna-da2h0ba.gif" id = "DelMe" 
