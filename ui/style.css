@@ -44,8 +44,7 @@ form {
   border-bottom-color: rgba(60,60,60,.4);
   border-right-color: rgba(60,60,60,.4);
   box-shadow: 10px 10px 5px #000;
-  height: 0px;
-  overflow: hidden;
+  display:none;
 }
 
 form input.username, input.pass {
