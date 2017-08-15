@@ -3,7 +3,9 @@ var morgan = require('morgan');
 var path = require('path');
 var app = express();
 app.use(morgan('combined'));
+app.use(bodyParser.json());
 var crypto = require('crypto');
+var bodyParser = require('body-parser');
 
 var Pool = require('pg').Pool;
 var config = {
@@ -50,21 +52,23 @@ app.get('/ui/commscript.js', function (req, res) {
 var counter = {"pageviews":800};
 var flag = "From server.js";
 app.get('/counter', function (req, res){
-  pool.query("SELECT pageviews FROM users WHERE name='Hyperclaw79'",function(err,result){
-      if(err){
-        res.status(500).send("Flag: "+err.toString());  
-      }
-      else{
-        counter = result.rows[0];
-        flag = "From query";
-      }
-  });
-  var cnt = counter.pageviews;
-  cnt = parseInt(cnt)+1;
-  if(isNaN(cnt)) res.status(500).send(flag+': returned NaN as seen in: '+JSON.stringify(counter));
-  else pool.query("UPDATE users SET pageviews = $1 WHERE name = 'Hyperclaw79'",[cnt]);
-  return res.send(flag +": " + cnt.toString());
-});
+      pool.query("SELECT pageviews FROM users WHERE name='Hyperclaw79'",function(err,result){
+          if(err){
+            res.status(500).send("Flag: "+err.toString());  
+          }
+          else{
+            counter = result.rows[0];
+            flag = "From query";
+            var cnt = counter.pageviews;
+            cnt = parseInt(cnt)+1;
+            if(isNaN(cnt)) res.status(500).send(flag+': returned NaN as seen in: '+JSON.stringify(counter));
+            else pool.query("UPDATE users SET pageviews = $1 WHERE name = 'Hyperclaw79'",[cnt]);
+            return res.send(flag +": " + cnt.toString());
+
+          }
+      });
+
+    });
 
 app.get('/submit-comment', function (req, res) {
   var comment = req.query.comm;
@@ -79,6 +83,21 @@ function hash(input,salt){
 app.get('/hash/:input',function(req,res){
     var hashedString = hash(req.params.input,'salt_this_up_Jarvis');
     res.send(hashedString);
+});
+
+app.post('/create_account',function(req,res){
+    var username = req.body.username;
+    var password = req.body.password;
+    var salt = crypto.getRandomBytes(128).toString('hex');
+    var hashedPwd = hash(password,salt);
+    pool.query('INSERT INTO "users" (username,password) VALUES ($1, $2)',[username,hashedPwd],function(err,result){
+        if(err){
+            res.status(500).send(err.toString());
+        }
+        else{
+            res.send("Account succesfully created with the username: "+username);
+        }
+    });
 });
 
 app.get('/articles/:articleName', function (req, res) {
