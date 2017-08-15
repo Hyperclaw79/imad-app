@@ -120,7 +120,7 @@ app.post('/create_account',function(req,res){
             else{
                 var salt = crypto.randomBytes(128).toString('hex');
                 var hashedPwd = hash(password,salt);
-                pool.query('INSERT INTO "authlist" (username,password) VALUES ($1, $2)',[username,hashedPwd],function(err,result){
+                pool.query('INSERT INTO "authlist" (username,password) VALUES ($1, $2)',[uname,hashedPwd],function(err,result){
                     if(err){
                         res.status(500).send(err.toString());
                     }
