@@ -86,7 +86,8 @@ app.get('/submit-comment', function (req, res) {
                     res.status(500).send(err.toString());
                 }
                 else{
-                    res.send(updateComment(comm_List.push(comm)));
+                    comm_List.push(comm);
+                    res.send(updateComment(comm_List));
                 }
             });
         }
