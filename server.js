@@ -156,7 +156,7 @@ app.post('/login',function(req,res){
                     res.send('Succesfully Logged in.');
                 }
                 else{
-                    res.status(403).send('<h2>Incorrect Password. Please try again.</h2><p>Password is case sensitive.</p>');
+                    res.status(403).send('Incorrect Password. Please try again. Hint:Password is case sensitive.');
                 }
             }
         }
