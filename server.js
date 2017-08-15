@@ -81,7 +81,7 @@ app.get('/submit-comment', function (req, res) {
                     res.status(500).send(err.toString());
                 }
                 else{
-                    res.send(result.rows[0]);
+                    res.send(result.rows);
                 }
             });
         }
