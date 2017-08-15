@@ -22,7 +22,7 @@ nav div {
 
 .dropbtn{
   margin: 10px;
-  position:absolute;
+  float: right;
   height: 50px;
   width: 75px;
 }
@@ -69,6 +69,7 @@ p {
   background-image: url(http://diabetesdad.org/files/2013/01/Blue-flame-extinguished.jpg);
   }
   #details {
+     clear: both; 
      border: 10px solid transparent;
     padding: 15px;
     -webkit-border-image: url(http://multimedia.3m.com/mws/media/1178596P/3m-wrap-film-1080-m227-matte-blue-metallic.jpg?boundedSize=310) 30 stretch; /* Safari 3.1-5 */
