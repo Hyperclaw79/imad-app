@@ -34,6 +34,7 @@ form {
   top: 60px;
   right: 0;
   width: 250px;
+  z-index: 99;
   margin: 0 auto;
   background: rgba(255 ,0,0,.3);
   padding: 20px 22px;
