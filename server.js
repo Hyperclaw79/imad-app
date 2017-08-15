@@ -3,9 +3,9 @@ var morgan = require('morgan');
 var path = require('path');
 var app = express();
 app.use(morgan('combined'));
-app.use(bodyParser.json());
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
+app.use(bodyParser.json());
 
 var Pool = require('pg').Pool;
 var config = {
