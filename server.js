@@ -81,7 +81,7 @@ app.get('/submit-comment', function (req, res) {
                     res.status(500).send(err.toString());
                 }
                 else{
-                    var commLst = [];
+                    var commList = [];
                     for(var m = 0; m< result.rows.length;i++){
                         commList[m]=result.rows[m].comment;
                     }
