@@ -71,23 +71,27 @@ app.get('/counter', function (req, res){
 
 app.get('/submit-comment', function (req, res) {
   var comment = req.query.comm;
-  pool.query('INSERT INTO "comments" ( "comment") VALUES ($1);',[comment],function(err,result){
-        if(err){
-            res.status(500).send(err.toString());
+  pool.query('SELECT "comment" FROM "comments"',function(err,result){
+    if(err){
+        res.status(500).send(err.toString());
+    }
+    else{
+        var comm_List = [];
+        for(var m = 0; m < result.rows.length;m++){
+            comm_List[m]=result.rows[m].comment;
         }
-        else{
-            pool.query('SELECT "comment" FROM "comments"',function(err,result){
-                if(err){
-                    res.status(500).send(err.toString());
-                }
-                else{
-                    var comm_List = [];
-                    for(var m = 0; m < result.rows.length;m++){
-                        comm_List[m]=result.rows[m].comment;
-                    }
-                    res.send(updateComment(comm_List));
-                }
-            });
+        var temp = comm_List.filter(function(elem, index, self) {
+        comm_List = temp;    
+            return index == self.indexOf(elem);
+        });
+        pool.query('INSERT INTO "comments" ( "comment") VALUES ($1);',[comment],function(err,result){
+            if(err){
+                res.status(500).send(err.toString());
+            }
+            else{
+                res.send(updateComment(comm_List));
+            }
+        });
         }
     });
   //res.send(updateComment(comment));
