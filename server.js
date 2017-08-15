@@ -107,23 +107,28 @@ app.get('/hash/:input',function(req,res){
 });
 
 app.post('/create_account',function(req,res){
-    var username = req.body.username;
+    var uname = req.body.username;
     var password = req.body.password;
-    pool.query('SELECT (username,password) FROM "authlist" WHERE "username" = $1',[username],function(err,result){
+    pool.query('SELECT (username,password) FROM "authlist" WHERE "username" = $1',[uname],function(err,result){
         if(err){
-            var salt = crypto.randomBytes(128).toString('hex');
-            var hashedPwd = hash(password,salt);
-            pool.query('INSERT INTO "authlist" (username,password) VALUES ($1, $2)',[username,hashedPwd],function(err,result){
-                if(err){
-                    res.status(500).send(err.toString());
-                }
-                else{
-                    res.send("Account succesfully created with the username: "+username);
-                }
-            });
+            res.status(500).send(err.toString());
         }
         else{
+            if(result.rows[0].username==uname){
             res.status(403).send('Account already exists. Please Login.');
+            }
+            else{
+                var salt = crypto.randomBytes(128).toString('hex');
+                var hashedPwd = hash(password,salt);
+                pool.query('INSERT INTO "authlist" (username,password) VALUES ($1, $2)',[username,hashedPwd],function(err,result){
+                    if(err){
+                        res.status(500).send(err.toString());
+                    }
+                    else{
+                        res.send("Account succesfully created with the username: "+username);
+                    }
+                });
+        }
         }
     });
 });
