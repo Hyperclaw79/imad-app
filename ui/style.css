@@ -24,7 +24,7 @@ nav div {
   margin: 10px;
   position: fixed;
   top:0;
-  right:0;
+  right:85px;
   height: 50px;
   width: 75px;
 }
@@ -70,8 +70,8 @@ form input.username {
   background-position: 220px 10px;
   box-shadow: 5px 5px 5px #000;
 }
-form #uimage { position: absolute; top: 42.5px; right: 25px; opacity:0.75}
-form #pimage { position: absolute; top: 113px; right: 25px; opacity:1}
+form #uimage { position: absolute; top: 42.5px; right: 25px; opacity:0.75; display:block;}
+form #pimage { position: absolute; top: 113px; right: 25px; opacity:1;display:block;}
 form input.pass {
   background-position: 223px 8px;
   box-shadow: 5px 5px 5px #000;    
