@@ -71,12 +71,12 @@ app.get('/counter', function (req, res){
 
 app.get('/submit-comment', function (req, res) {
   var comment = req.query.comm;
-  pool.query(`INSERT INTO "comments" "comment" VALUES $1;`,[comment],function(err,result){
+  pool.query('INSERT INTO "comments" ( "comment") VALUES ($1);',[comment],function(err,result){
         if(err){
             res.status(500).send(err.toString());
         }
         else{
-            pool.query(`SELECT "comment" FROM "comments"`,[comment],function(err,result){
+            pool.query('SELECT "comment" FROM "comments"',[comment],function(err,result){
                 if(err){
                     res.status(500).send(err.toString());
                 }
