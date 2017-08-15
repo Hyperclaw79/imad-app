@@ -50,20 +50,19 @@ app.get('/ui/commscript.js', function (req, res) {
 });
 
 var counter = {"pageviews":800};
-var flag = "From server.js";
 app.get('/counter', function (req, res){
       pool.query("SELECT pageviews FROM users WHERE name='Hyperclaw79'",function(err,result){
           if(err){
-            res.status(500).send("Flag: "+err.toString());  
+            res.status(500).send(err.toString());  
           }
           else{
             counter = result.rows[0];
             flag = "From query";
             var cnt = counter.pageviews;
             cnt = parseInt(cnt)+1;
-            if(isNaN(cnt)) res.status(500).send(flag+': returned NaN as seen in: '+JSON.stringify(counter));
+            if(isNaN(cnt)) res.status(500).send('Returned NaN as seen in: '+JSON.stringify(counter));
             else pool.query("UPDATE users SET pageviews = $1 WHERE name = 'Hyperclaw79'",[cnt]);
-            return res.send(flag +": " + cnt.toString());
+            return res.send(cnt.toString());
 
           }
       });
