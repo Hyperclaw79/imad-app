@@ -23,15 +23,15 @@ nav div {
 
 .dropbtn{
   margin: 10px;
-  float: right;
+  position: fixed;
+  top:0;
+  right:0;
   height: 50px;
   width: 75px;
 }
 
 form {
-  position: fixed;
-  top:0;
-  right:0;
+  position: relative;
   width: 250px;
   margin: 0 auto;
   background: rgba(255 ,0,0,.3);
