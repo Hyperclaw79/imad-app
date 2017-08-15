@@ -63,7 +63,7 @@ p {
      left: 0;
   }
   .sidenav {
-  margin-top: 50px;
+  margin-top: 100px;
   padding-top: 50px;
   border-radius: 15px 50px 30px 5px;
   background-image: url(http://diabetesdad.org/files/2013/01/Blue-flame-extinguished.jpg);
@@ -76,11 +76,7 @@ p {
     border-image: url(http://multimedia.3m.com/mws/media/1178596P/3m-wrap-film-1080-m227-matte-blue-metallic.jpg?boundedSize=310) 30 stretch;
 
   }
-  
-  #im_gif {
-      margin-bottom: 50px;
-  }
-  
+
   #im_gif:hover {
 	  opacity:0.6;
 	  transition: width 2s, height 4s;
