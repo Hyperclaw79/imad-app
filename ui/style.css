@@ -15,6 +15,11 @@
 	display: none;
 }
 
+nav div {
+  margin: 0 5px 0 5px;
+  position: relative;
+}
+
 .dropbtn{
   margin: 10px;
   float: right;
