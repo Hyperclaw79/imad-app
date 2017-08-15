@@ -41,6 +41,10 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
+app.get('/ui/loginButton.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'ironman_ios_2x_.png'));
+});
+
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
