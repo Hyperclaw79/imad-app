@@ -70,7 +70,7 @@ form input.username {
   background-position: 220px 10px;
   box-shadow: 5px 5px 5px #000;
 }
-form #uimage { position: absolute; top: 42px; right: 25px; opacity:0.75}
+form #uimage { position: absolute; top: 42.5px; right: 25px; opacity:0.75}
 form #pimage { position: absolute; top: 113px; right: 25px; opacity:1}
 form input.pass {
   background-position: 223px 8px;
