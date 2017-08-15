@@ -114,7 +114,7 @@ app.post('/create_account',function(req,res){
             res.status(500).send(err.toString());
         }
         else{
-            return res.send(result.rows[0]);
+            return res.send(result.rows);
             if(result.rows[0].username==uname){
             res.status(403).send('Account already exists. Please Login.');
             }
