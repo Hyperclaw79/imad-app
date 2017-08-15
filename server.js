@@ -76,7 +76,7 @@ app.get('/submit-comment', function (req, res) {
             res.status(500).send(err.toString());
         }
         else{
-            pool.query('SELECT "comment" FROM "comments"',[comment],function(err,result){
+            pool.query('SELECT "comment" FROM "comments"',function(err,result){
                 if(err){
                     res.status(500).send(err.toString());
                 }
