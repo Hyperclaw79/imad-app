@@ -136,7 +136,7 @@ app.post('/create_account',function(req,res){
 app.post('/login',function(req,res){
     var username = req.body.username;
     var password = req.body.password;
-    pool.query('SELECT (username,password) FROM "authlist" WHERE "username" = $1',[username],function(err,result){
+    pool.query('SELECT "password" FROM "authlist" WHERE "username" = $1',[username],function(err,result){
         if(err){
             res.status(500).send(err.toString());
         }
