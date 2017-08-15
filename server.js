@@ -145,7 +145,7 @@ app.post('/login',function(req,res){
                 res.status(403).send('Account does not exist. Please Register.');
             }
             else{
-                return res.send(result.rows[0]);
+                return res.send(result.rows[0].password);
                 var hashedPwd = result.rows[0].password;
                 var salt = hashedPwd.split('$')[2];
                 var saltyPwd = hash(password,salt);
