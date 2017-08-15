@@ -22,7 +22,7 @@ nav div {
 
 .dropbtn{
   margin: 10px;
-  position:relative;
+  position:absolute;
   height: 50px;
   width: 75px;
 }
