@@ -30,6 +30,7 @@ nav div {
 
 form {
   position: relative;
+  float: right;
   width: 250px;
   margin: 0 auto;
   background: rgba(255 ,0,0,.3);
