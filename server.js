@@ -81,9 +81,9 @@ app.get('/submit-comment', function (req, res) {
             comm_List[m]=result.rows[m].comment;
         }
         var temp = comm_List.filter(function(elem, index, self) {
-        comm_List = temp;    
             return index == self.indexOf(elem);
         });
+        comm_List = temp;
         pool.query('INSERT INTO "comments" ( "comment") VALUES ($1);',[comment],function(err,result){
             if(err){
                 res.status(500).send(err.toString());
