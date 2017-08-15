@@ -109,11 +109,11 @@ app.get('/hash/:input',function(req,res){
 app.post('/create_account',function(req,res){
     var username = req.body.username;
     var password = req.body.password;
-    pool.query('SELECT (username,password) FROM "users" WHERE "username" = $1',[username],function(err,result){
+    pool.query('SELECT (username,password) FROM "authlist" WHERE "username" = $1',[username],function(err,result){
         if(err){
             var salt = crypto.randomBytes(128).toString('hex');
             var hashedPwd = hash(password,salt);
-            pool.query('INSERT INTO "users" (username,password) VALUES ($1, $2)',[username,hashedPwd],function(err,result){
+            pool.query('INSERT INTO "authlist" (username,password) VALUES ($1, $2)',[username,hashedPwd],function(err,result){
                 if(err){
                     res.status(500).send(err.toString());
                 }
@@ -131,7 +131,7 @@ app.post('/create_account',function(req,res){
 app.post('/login',function(req,res){
     var username = req.body.username;
     var password = req.body.password;
-    pool.query('SELECT (username,password) FROM "users" WHERE "username" = $1',[username],function(err,result){
+    pool.query('SELECT (username,password) FROM "authlist" WHERE "username" = $1',[username],function(err,result){
         if(err){
             res.status(500).send(err.toString());
         }
