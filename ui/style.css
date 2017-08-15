@@ -25,7 +25,9 @@ nav div {
 
 .dropbtn{
   margin: 10px;
-  float: right;
+  position: fixed;
+  top:0;
+  right:0;
   height: 50px;
   width: 75px;
 }
