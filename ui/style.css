@@ -30,6 +30,50 @@ nav div {
   z-index: 98;
 }
 
+#logout_button {
+  border-radius: 4px;
+  background-color: #f00;
+  border: 2px solid #F00;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#logout_button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#logout_button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#logout_button:hover {
+   color:black;
+   background-color:white;
+}
+
+#logout_button:hover span {
+  padding-right: 25px;
+}
+
+#logout_button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
 form {
   position: fixed;
   top: 60px;
