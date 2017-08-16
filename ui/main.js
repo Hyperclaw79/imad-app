@@ -51,7 +51,7 @@ function verify(){
     request.onreadystatechange = function(){
         if (request.readyState === XMLHttpRequest.DONE){
             if (request.status === 200){
-                $('.form').hide();
+                $('#loginForm').hide();
                 $('#dropbtn').hide();
                 $('#logout_button').show();
             }
