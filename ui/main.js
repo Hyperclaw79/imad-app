@@ -6,6 +6,8 @@ function loader(){
 $('#loginForm').hide();});
     
     $('#dropbtn').click(function(){
+        console.log('Click detected.');
+        console.log($('#loginForm').css.display);
         $('#loginForm').css.display = "block";
     });
     
