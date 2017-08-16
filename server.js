@@ -172,9 +172,9 @@ app.post('/login',function(req,res){
 app.get('/check-session',function(req,res){
     if(req.session&&req.sessiom.auth&&req.session.auth.userId){
         return res.send('Active');
+    }
     else{
         return res.send('Inactive');
-    }
     }
 });
 
