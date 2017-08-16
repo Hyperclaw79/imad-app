@@ -9,7 +9,9 @@ app.use(bodyParser.json());
 var session = require('express-session');
 app.use(session({
     secret: 'ChangeMeSenpai',
-    cookie: {maxAge: 1000 * 60 * 60 * 24 * 30}
+    cookie: {maxAge: 1000 * 60 * 60 * 24 * 30},
+    resave: false,
+    saveUninitialized: false
 }));
 
 var Pool = require('pg').Pool;
