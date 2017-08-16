@@ -82,6 +82,14 @@ nav div {
   right: 0;
 }
 
+#loginForm {
+    display:none;
+}
+
+#loginForm:hover {
+    display:block;
+}
+
 form {
   position: fixed;
   top: 60px;
@@ -97,7 +105,6 @@ form {
   border-bottom-color: rgba(60,60,60,.4);
   border-right-color: rgba(60,60,60,.4);
   box-shadow: 10px 10px 5px #000;
-  display:none;
 }
 
 form input.username, input.pass {
