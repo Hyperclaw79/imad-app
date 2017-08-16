@@ -1,13 +1,16 @@
 function loader(){
     
-    $('#dropbtn').hover(function(){
-        $('#loginForm').show();
-    },function(){
+    $('#dropbtn').hover(function() {
+      $('#loginForm').show();
+    }, function() {
+      if ($(this).data('clicked') !== "yes") {
         $('#loginForm').hide();
+      }
     });
     
-    $('#dropbtn').click(function(){
-        $('#loginForm').css('display','block');
+    $('#dropbtn').click(function() {
+      $(this).data('clicked', 'yes');
+      $('#loginForm').css('display', 'block');
     });
     
     console.log('Counter Incremented!');
