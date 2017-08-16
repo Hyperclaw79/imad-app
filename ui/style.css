@@ -44,6 +44,7 @@ nav div {
   text-align: center;
   font-size: 14px;
   padding: 20px;
+  padding-top:10px;
   width: 100px;
   transition: all 0.5s;
   cursor: pointer;
