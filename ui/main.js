@@ -7,7 +7,7 @@ function loader(){
     });
     
     $('#dropbtn').click(function(){
-        console.log($('#loginForm').style.display());
+        console.log($('#loginForm').style().display);
         $('#loginForm').style.display = "block";
     });
     
