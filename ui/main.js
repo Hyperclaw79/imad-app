@@ -5,40 +5,10 @@ function loader(){
     },function(){
         $('#loginForm').hide();
     });
-    $('#loginForm').hover(function(){
+    $('#loginform').hover(function(){
         $(this).show();
     },function(){
-        setTimeout(function(){$(this).hide();},3000);
-    });
-    $('#uname').hover(function(){
-        $('#loginForm').show();
-    },function(){
-        if ($(this).value !== "USERNAME"){
-            console.log($(this).value);
-        }
-        else{
-            setTimeout(function(){$('#loginForm').hide();},3000);
-        }
-    });
-    $('#pwd').hover(function(){
-        $('#loginForm').show();
-    },function(){
-        if ($('#uname').value !== "USERNAME"){
-            console.log($('#uname').value);
-        }
-        else{
-            setTimeout(function(){$('#loginForm').hide();},3000);
-        }
-    });
-    $('#sumbit').hover(function(){
-        $('#loginForm').show();
-    },function(){
-        if ($('#uname').value !== "USERNAME"){
-            console.log($('#uname').value);
-        }
-        else{
-            setTimeout(function(){$('#loginForm').hide();},3000);
-        }
+        $(this).hide();
     });
     
     console.log('Counter Incremented!');
