@@ -169,6 +169,11 @@ app.post('/login',function(req,res){
     });
 });
 
+app.get('/logout',function(){
+    delete req.session.auth;
+    res.send('Successfully Logged out.');
+});
+
 app.get('/articles/:articleName', function (req, res) {
   var articleName = req.params.articleName;
   pool.query("SELECT * FROM article WHERE title=$1",[articleName],function(err,result){
