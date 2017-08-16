@@ -83,11 +83,12 @@ nav div {
 }
 
 #loginForm {
-    display:none;
+    height:0;
 }
 
 #loginForm:hover {
-    display:block;
+    height:auto;
+    
 }
 
 form {
