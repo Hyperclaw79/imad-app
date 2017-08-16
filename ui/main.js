@@ -7,8 +7,8 @@ $('#loginForm').hide();});
     
     $('#dropbtn').click(function(){
         console.log('Click detected.');
-        console.log($('#loginForm').css.display);
-        $('#loginForm').css.display = "block";
+        console.log($('#loginForm').display);
+        $('#loginForm').display = "block";
     });
     
     console.log('Counter Incremented!');
