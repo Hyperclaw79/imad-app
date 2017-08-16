@@ -112,7 +112,8 @@ function play_oh(){
   <header>
       <nav>
         <div>
-          <input type = "image" src = "ui/loginButton.png" class="dropbtn" onmouseover = disp_form() onmouseout = hide_form()>
+          <input type = "image" src = "ui/loginButton.png" class="dropbtn" id="dropbtn" onmouseover = disp_form() onmouseout = hide_form()>
+          <button class="button" id = 'logout_button' onclick = logout() style="vertical-align:middle"><span>Logout </span></button>
         </div>
       </nav>
   </header>
