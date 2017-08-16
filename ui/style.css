@@ -100,10 +100,6 @@ form {
   display:none;
 }
 
-form:hover{
-    display:block;
-}
-
 form input.username, input.pass {
   width: 212px;
   border: 1px inset;
