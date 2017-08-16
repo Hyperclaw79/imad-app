@@ -31,6 +31,7 @@ nav div {
 }
 
 #logout_button {
+  display: none;        
   margin: 10px;
   position: fixed;
   top:0;
