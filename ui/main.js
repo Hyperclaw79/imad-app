@@ -3,7 +3,7 @@ function loader(){
     $('#dropbtn').hover(function(){
         $('#loginForm').show();
     },function(){
-        $('#loginForm').hide();
+        setTimeout(function(){$('#loginForm').hide();},500);
     });
     $('#loginform').hover(function(){
         $(this).show();
