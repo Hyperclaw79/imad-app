@@ -176,7 +176,7 @@ app.get('/check-session',function(req,res){
         return res.send('Active');
     }
     else{
-        return res.send('Inactive: '+req.session);
+        return res.send('Inactive: '+JSON.stringify(req.session));
     }
 });
 
