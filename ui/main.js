@@ -1,23 +1,29 @@
 function loader(){
     
     $('#dropbtn').hover(function(){
-        console.log('Mouse on.');
         $('#loginForm').show();
     },function(){
-        console.log('Mouse off.');
         $('#loginForm').hide();
     });
     $('#loginForm').hover(function(){
-        $(this).toggle();
+        $(this).show();
+    },function(){
+        $(this).hide();
     });
     $('#uname').hover(function(){
-        $('#loginForm').toggle();
+        $('#loginForm').show();
+    },function(){
+        $('#loginForm').hide();
     });
     $('#pwd').hover(function(){
-        $('#loginForm').toggle();
+        $('#loginForm').show();
+    },function(){
+        $('#loginForm').hide();
     });
     $('#sumbit').hover(function(){
-        $('#loginForm').toggle();
+        $('#loginForm').show();
+    },function(){
+        $('#loginForm').hide();
     });
     
     console.log('Counter Incremented!');
