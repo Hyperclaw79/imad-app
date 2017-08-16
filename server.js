@@ -162,7 +162,7 @@ app.post('/login',function(req,res){
                 if(saltyPwd===hashedPwd){
                     req.session.auth = {userId: result.rows[0].session_id};
                     //res.send('Succesfully Logged in. '+JSON.stringify(req.session));
-                    res.send(JSON.stingify(result.rows[0]));
+                    res.send(JSON.stringify(result.rows[0]));
                 }
                 else{
                     res.status(403).send('Incorrect Password. Please try again. Hint:Password is case sensitive.');
