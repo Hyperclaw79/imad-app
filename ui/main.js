@@ -13,17 +13,32 @@ function loader(){
     $('#uname').hover(function(){
         $('#loginForm').show();
     },function(){
-        setTimeout(function(){$('#loginForm').hide();},3000);
+        if ($(document.activeElement).attr("type") == "text"){
+            return false;
+        }
+        else{
+            setTimeout(function(){$('#loginForm').hide();},3000);
+        }
     });
     $('#pwd').hover(function(){
         $('#loginForm').show();
     },function(){
-        setTimeout(function(){$('#loginForm').hide();},3000);
+        if ($(document.activeElement).attr("type") == "text"){
+            return false;
+        }
+        else{
+            setTimeout(function(){$('#loginForm').hide();},3000);
+        }
     });
     $('#sumbit').hover(function(){
         $('#loginForm').show();
     },function(){
-        setTimeout(function(){$('#loginForm').hide();},3000);
+        if ($(document.activeElement).attr("type") == "text"){
+            return false;
+        }
+        else{
+            setTimeout(function(){$('#loginForm').hide();},3000);
+        }
     });
     
     console.log('Counter Incremented!');
