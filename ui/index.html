@@ -95,6 +95,9 @@ function play_oh(){
 </script>
 
 <script>
+    $('#dropbtn').hover(function(){
+        $('#loginForm').toggle();
+    });
     $('#loginForm').hover(function(){
         $(this).toggle();
     });
@@ -108,16 +111,6 @@ function play_oh(){
         $('#loginForm').toggle();
     });
 </script>
-<script>
-    function disp_form(){
-        $('#loginForm').show();
-    }
-    function hide_form(){
-        setTimeout(function(){
-            $('#loginForm').hide();
-        },100);
-    }
-</script>
 
 <input type="image" src = "http://orig00.deviantart.net/f2e7/f/2016/134/1/0/j_a_r_v_i_s_ui_by_drkdna-da2h0ba.gif" id = "DelMe" 
          onclick = deleter() align = "middle" alt = "Click Me!" >
@@ -126,7 +119,7 @@ function play_oh(){
   <header>
       <nav>
         <div>
-          <input type = "image" src = "ui/loginButton.png" class="dropbtn" id="dropbtn" onmouseover = disp_form() onmouseout = hide_form()>
+          <input type = "image" src = "ui/loginButton.png" class="dropbtn" id="dropbtn">
           <button class="button" id = 'logout_button' onclick = logout() style="vertical-align:middle"><span>Logout </span></button>
         </div>
       </nav>
