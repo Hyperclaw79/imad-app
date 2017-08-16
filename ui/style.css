@@ -82,7 +82,7 @@ nav div {
   right: 0;
 }
 
-form {
+ul {
   position: fixed;
   top: 60px;
   right: 85px;
@@ -100,7 +100,7 @@ form {
   display: none;
 }
 
-form input.username, input.pass {
+ul input.username, input.pass {
   width: 212px;
   border: 1px inset;
   border-bottom-color: rgba(255,255,255,.5);
@@ -117,15 +117,15 @@ form input.username, input.pass {
   margin-bottom: 19px;
 }
 
-form input.username, input.pass:focus { background-color: rgba(0,0,0,.4); }
+ul input.username, input.pass:focus { background-color: rgba(0,0,0,.4); }
 
-form input.username {
+ul input.username {
   background-position: 220px 10px;
   box-shadow: 5px 5px 5px #000;
 }
-form #uimage { position: absolute; top: 42px; right: 25px; opacity:0.75; display:block;}
-form #pimage { position: absolute; top: 113.5px; right: 25px; opacity:1;display:block;}
-form input.pass {
+ul #uimage { position: absolute; top: 42px; right: 25px; opacity:0.75; display:block;}
+ul #pimage { position: absolute; top: 113.5px; right: 25px; opacity:1;display:block;}
+ul input.pass {
   background-position: 223px 8px;
   box-shadow: 5px 5px 5px #000;    
 }
@@ -134,7 +134,7 @@ form input.pass {
 ::-moz-placeholder { color: #ccc; text-transform: uppercase; }
 :-ms-input-placeholder { color: #ccc; text-transform: uppercase; }
 
-form #submit {
+ul #submit {
   width: 55px;
   margin-bottom: 0;
   margin-left: 80px;
