@@ -13,7 +13,7 @@ function loader(){
     $('#uname').hover(function(){
         $('#loginForm').show();
     },function(){
-        if ($(this).value !== ""){
+        if ($(this).value.toLowerCase() !== "username"){
             return false;
         }
         else{
@@ -23,7 +23,7 @@ function loader(){
     $('#pwd').hover(function(){
         $('#loginForm').show();
     },function(){
-        if ($('#uname').value !== ""){
+        if ($('#uname').value.toLowerCase() !== "username"){
             return false;
         }
         else{
@@ -33,7 +33,7 @@ function loader(){
     $('#sumbit').hover(function(){
         $('#loginForm').show();
     },function(){
-        if ($('#uname').value !== ""){
+        if ($('#uname').value.toLowerCase() !== "username"){
             return false;
         }
         else{
