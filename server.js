@@ -158,7 +158,7 @@ app.post('/login',function(req,res){
                 var salt = hashedPwd.split('$')[2];
                 var saltyPwd = hash(password,salt);
                 if(saltyPwd===hashedPwd){
-                    req.session.auth = {userId: result.rows[0].id};
+                    req.session.auth = {userId: result.rows[0].session_id};
                     res.send('Succesfully Logged in.');
                 }
                 else{
