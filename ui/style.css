@@ -87,8 +87,6 @@ form {
   top: 60px;
   right: 85px;
   width: 250px;
-  height: 0;
-  overflow: hidden;
   z-index: 99;
   margin: 0 auto;
   background: rgba(255 ,0,0,.7);
@@ -99,6 +97,7 @@ form {
   border-bottom-color: rgba(60,60,60,.4);
   border-right-color: rgba(60,60,60,.4);
   box-shadow: 10px 10px 5px #000;
+  display: none;
 }
 
 form input.username, input.pass {
