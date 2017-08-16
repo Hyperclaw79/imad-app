@@ -2,12 +2,14 @@ function loader(){
     
     $('#dropbtn').hover(function(){
         $('#loginForm').show();
+        console.log($('#loginForm').style.display);
     },function(){
         $('#loginForm').hide();
+        console.log($('#loginForm').style.display);
     });
     
     $('#dropbtn').click(function(){
-        console.log($('#loginForm').style().display);
+        console.log($('#loginForm').style.display);
         $('#loginForm').style.display = "block";
     });
     
