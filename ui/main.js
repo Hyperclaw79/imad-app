@@ -6,7 +6,7 @@ function loader(){
 $('#loginForm').hide();});
     
     $('#dropbtn').click(function(){
-        $('#loginForm').show();
+        $('#loginForm').css.display = "block";
     });
     
     console.log('Counter Incremented!');
