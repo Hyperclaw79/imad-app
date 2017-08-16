@@ -8,7 +8,7 @@ function loader(){
     $('#loginForm').hover(function(){
         $(this).show();
     },function(){
-        $(this).hide();
+        $(this).show();
     });
     $('#uname').hover(function(){
         $('#loginForm').show();
