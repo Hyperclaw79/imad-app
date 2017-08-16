@@ -100,7 +100,7 @@ form {
   display:none;
 }
 
-form input.username, input.pass {
+form input.uname, input.pass {
   width: 212px;
   border: 1px inset;
   border-bottom-color: rgba(255,255,255,.5);
@@ -117,9 +117,9 @@ form input.username, input.pass {
   margin-bottom: 19px;
 }
 
-form input.username, input.pass:focus { background-color: rgba(0,0,0,.4); }
+uname, input.pass:focus { background-color: rgba(0,0,0,.4); }
 
-form input.username {
+.uname {
   background-position: 220px 10px;
   box-shadow: 5px 5px 5px #000;
 }
@@ -129,10 +129,6 @@ form input.pass {
   background-position: 223px 8px;
   box-shadow: 5px 5px 5px #000;    
 }
-
-::-webkit-input-placeholder { color: #ccc; text-transform: uppercase; }
-::-moz-placeholder { color: #ccc; text-transform: uppercase; }
-:-ms-input-placeholder { color: #ccc; text-transform: uppercase; }
 
 form #submit {
   width: 55px;
