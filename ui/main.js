@@ -1,4 +1,22 @@
 function loader(){
+
+var sess = new XMLHttpRequest();
+    sess.onreadystatechange = function(){
+        if (sess.readyState === XMLHttpRequest.DONE){
+            if (sess.status === 200){
+                if(sess.responseText==="Active"){
+                    $('#logout_button').show();
+                    $('#dropbtn').hide();
+                }
+                else{
+                    $('#logout_button').hide();
+                    $('#dropbtn').show();
+                }
+            }
+        }
+    };
+    sess.open('GET','http://dragonlordthota717.imad.hasura-app.io/check-session', true);
+    sess.send(null);
     
     $('#dropbtn').hover(function() {
       $('#loginForm').show();
@@ -26,24 +44,6 @@ function loader(){
     };
     request.open('GET','http://dragonlordthota717.imad.hasura-app.io/counter', true);
     request.send(null);
-    
-    var sess = new XMLHttpRequest();
-    sess.onreadystatechange = function(){
-        if (sess.readyState === XMLHttpRequest.DONE){
-            if (sess.status === 200){
-                if(sess.responseText==="Active"){
-                    $('#logout_button').show();
-                    $('#dropbtn').hide();
-                }
-                else{
-                    $('#logout_button').hide();
-                    $('#dropbtn').show();
-                }
-            }
-        }
-    };
-    sess.open('GET','http://dragonlordthota717.imad.hasura-app.io/check-session', true);
-    sess.send(null);
 }
 
 function verify(){
