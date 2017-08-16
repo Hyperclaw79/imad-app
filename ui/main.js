@@ -6,8 +6,8 @@ function loader(){
         setTimeout(function(){$('#loginForm').hide();},500);
     });
     
-    $('.form input').click(function(e) {
-        e.stopPropagation(); //This will prevent the event from bubbling up and close the dropdown when you type/click on text boxes.
+    $('#dropbtn').click(function(){
+        $('#loginForm').show();
     });
     
     console.log('Counter Incremented!');
