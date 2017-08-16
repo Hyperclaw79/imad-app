@@ -82,35 +82,13 @@ nav div {
   right: 0;
 }
 
-#loginForm {
-    height:0;
-    overflow:hidden;
-    position: fixed;
-    top: 60px;
-    right: 85px;
-    width: 250px;
-    z-index: 99;
-    margin: 0 auto;
-    background: rgba(255 ,0,0,.7);
-    padding: 20px 22px;
-    border: 1px solid;
-    border-top-color: rgba(255,255,255,.4);
-    border-left-color: rgba(255,255,255,.4);
-    border-bottom-color: rgba(60,60,60,.4);
-    border-right-color: rgba(60,60,60,.4);
-    box-shadow: 10px 10px 5px #000;
-}
-
-#loginForm:hover {
-    height:auto;
-    
-}
-
 form {
   position: fixed;
   top: 60px;
   right: 85px;
   width: 250px;
+  height: 0;
+  overflow: hidden;
   z-index: 99;
   margin: 0 auto;
   background: rgba(255 ,0,0,.7);
