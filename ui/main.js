@@ -19,10 +19,10 @@ function verify(){
     request.onreadystatechange = function(){
         if (request.readyState === XMLHttpRequest.DONE){
             if (request.status === 200){
-                $('#logout_button').show();
+                $('.form').hide();
                 $('#dropbtn').hide();
+                $('#logout_button').show();
                 alert('Successfully Logged in.');
-                
             }
             else{
                 alert(request.responseText);
@@ -42,7 +42,6 @@ function logout(){
         if (request.readyState === XMLHttpRequest.DONE){
             if (request.status === 200){
                 $('#logout_button').hide();
-                $('.form').hide();
                 $('#dropbtn').show();
                 alert(request.responseText);
             }
