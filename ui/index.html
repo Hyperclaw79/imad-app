@@ -96,7 +96,9 @@ function play_oh(){
 
 <script>
     $('#dropbtn').hover(function(){
-        $('#loginForm').toggle();
+        $('#loginForm').show();
+    },function(){
+        $('#loginForm').hide();
     });
     $('#loginForm').hover(function(){
         $(this).toggle();
