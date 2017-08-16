@@ -169,7 +169,7 @@ app.post('/login',function(req,res){
     });
 });
 
-app.get('/logout',function(){
+app.get('/logout',function(req,res){
     delete req.session.auth;
     res.send('Successfully Logged out.');
 });
