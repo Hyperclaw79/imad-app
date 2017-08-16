@@ -1,4 +1,25 @@
 function loader(){
+    
+    $('#dropbtn').hover(function(){
+        console.log('Mouse on.');
+        $('#loginForm').show();
+    },function(){
+        console.log('Mouse off.');
+        $('#loginForm').hide();
+    });
+    $('#loginForm').hover(function(){
+        $(this).toggle();
+    });
+    $('#uname').hover(function(){
+        $('#loginForm').toggle();
+    });
+    $('#pwd').hover(function(){
+        $('#loginForm').toggle();
+    });
+    $('#sumbit').hover(function(){
+        $('#loginForm').toggle();
+    });
+    
     console.log('Counter Incremented!');
     var request = new XMLHttpRequest();
     request.onreadystatechange = function(){
