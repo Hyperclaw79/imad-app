@@ -7,7 +7,7 @@ function loader(){
     });
     
     $('#dropbtn').click(function(){
-        $('form').css('display','block');
+        $('#loginForm').css('display','block');
     });
     
     console.log('Counter Incremented!');
