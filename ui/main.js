@@ -3,11 +3,11 @@ function loader(){
     $('#dropbtn').hover(function(){
         $('#loginForm').show();
     },function(){
-$('#loginForm').hide();});
+        $('#loginForm').hide();
+    });
     
     $('#dropbtn').click(function(){
-        console.log('Click detected.');
-        console.log($('#loginForm').style.display);
+        console.log($('#loginForm').style.display());
         $('#loginForm').style.display = "block";
     });
     
