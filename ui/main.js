@@ -2,15 +2,12 @@ function loader(){
     
     $('#dropbtn').hover(function(){
         $('#loginForm').show();
-        console.log($('#loginForm').style.display);
     },function(){
         $('#loginForm').hide();
-        console.log($('#loginForm').style.display);
     });
     
     $('#dropbtn').click(function(){
-        console.log($('#loginForm').style.display);
-        $('#loginForm').style.display = "block";
+        $('#loginForm').css('display','block');
     });
     
     console.log('Counter Incremented!');
