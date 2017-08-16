@@ -130,6 +130,10 @@ form input.pass {
   box-shadow: 5px 5px 5px #000;    
 }
 
+::-webkit-input-placeholder { color: #ccc; text-transform: uppercase; }
+::-moz-placeholder { color: #ccc; text-transform: uppercase; }
+:-ms-input-placeholder { color: #ccc; text-transform: uppercase; }
+
 form #submit {
   width: 55px;
   margin-bottom: 0;
