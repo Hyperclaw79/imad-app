@@ -13,17 +13,17 @@ function loader(){
     $('#uname').hover(function(){
         $('#loginForm').show();
     },function(){
-        $('#loginForm').hide();
+        setTimeout(function(){$(this).show();},10000);
     });
     $('#pwd').hover(function(){
         $('#loginForm').show();
     },function(){
-        $('#loginForm').hide();
+        setTimeout(function(){$(this).show();},10000);
     });
     $('#sumbit').hover(function(){
         $('#loginForm').show();
     },function(){
-        $('#loginForm').hide();
+        setTimeout(function(){$(this).show();},10000);
     });
     
     console.log('Counter Incremented!');
