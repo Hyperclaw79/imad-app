@@ -8,22 +8,22 @@ function loader(){
     $('#loginForm').hover(function(){
         $(this).show();
     },function(){
-        setTimeout(function(){$(this).show();},10000);
+        setTimeout(function(){$(this).hide();},3000);
     });
     $('#uname').hover(function(){
         $('#loginForm').show();
     },function(){
-        setTimeout(function(){$(this).show();},10000);
+        setTimeout(function(){$(this).hide();},3000);
     });
     $('#pwd').hover(function(){
         $('#loginForm').show();
     },function(){
-        setTimeout(function(){$(this).show();},10000);
+        setTimeout(function(){$(this).hide();},3000);
     });
     $('#sumbit').hover(function(){
         $('#loginForm').show();
     },function(){
-        setTimeout(function(){$(this).show();},10000);
+        setTimeout(function(){$(this).hide();},3000);
     });
     
     console.log('Counter Incremented!');
