@@ -1,15 +1,14 @@
 function loader(){
     
     $('#dropbtn').hover(function(){
-        $('#loginForm').height = "auto";
+        $('#loginForm').show();
     },function(){
-        setTimeout(function(){$('#loginForm').height = 0;},500);
+        setTimeout(function(){$('#loginForm').hide();},500);
     });
-    /*$('#loginform').hover(function(){
-        $(this).show();
-    },function(){
-        $(this).hide();
-    });*/
+    
+    $('.form input').click(function(e) {
+        e.stopPropagation(); //This will prevent the event from bubbling up and close the dropdown when you type/click on text boxes.
+    });
     
     console.log('Counter Incremented!');
     var request = new XMLHttpRequest();
