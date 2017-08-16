@@ -84,6 +84,7 @@ nav div {
 
 #loginForm {
     height:0;
+    overflow:hidden;
 }
 
 #loginForm:hover {
