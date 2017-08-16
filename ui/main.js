@@ -1,15 +1,15 @@
 function loader(){
     
     $('#dropbtn').hover(function(){
-        $('#loginForm').show();
+        $('#loginForm').height = "auto";
     },function(){
-        setTimeout(function(){$('#loginForm').hide();},500);
+        setTimeout(function(){$('#loginForm').height = 0;},500);
     });
-    $('#loginform').hover(function(){
+    /*$('#loginform').hover(function(){
         $(this).show();
     },function(){
         $(this).hide();
-    });
+    });*/
     
     console.log('Counter Incremented!');
     var request = new XMLHttpRequest();
