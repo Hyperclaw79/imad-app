@@ -13,6 +13,7 @@ function loader(){
     request.open('GET','http://dragonlordthota717.imad.hasura-app.io/counter', true);
     request.send(null);
 }
+
 function verify(){
     var request = new XMLHttpRequest();
     request.onreadystatechange = function(){
