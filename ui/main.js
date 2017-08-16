@@ -42,6 +42,7 @@ function logout(){
         if (request.readyState === XMLHttpRequest.DONE){
             if (request.status === 200){
                 $('#logout_button').hide();
+                $('.form').hide();
                 $('#dropbtn').show();
                 alert(request.responseText);
             }
