@@ -8,7 +8,7 @@ function loader(){
     $('#loginForm').hover(function(){
         $(this).show();
     },function(){
-        console.log('NOP');
+        setTimeout(function(){$(this).show();},10000);
     });
     $('#uname').hover(function(){
         $('#loginForm').show();
