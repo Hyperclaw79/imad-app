@@ -14,7 +14,7 @@ function loader(){
         $('#loginForm').show();
     },function(){
         if ($(this).value !== "USERNAME"){
-            return false;
+            console.log($(this).value);
         }
         else{
             setTimeout(function(){$('#loginForm').hide();},3000);
@@ -24,7 +24,7 @@ function loader(){
         $('#loginForm').show();
     },function(){
         if ($('#uname').value !== "USERNAME"){
-            return false;
+            console.log($('#uname').value);
         }
         else{
             setTimeout(function(){$('#loginForm').hide();},3000);
@@ -34,7 +34,7 @@ function loader(){
         $('#loginForm').show();
     },function(){
         if ($('#uname').value !== "USERNAME"){
-            return false;
+            console.log($('#uname').value);
         }
         else{
             setTimeout(function(){$('#loginForm').hide();},3000);
