@@ -40,11 +40,8 @@ function verify(){
                 $('.form').hide();
                 $('#dropbtn').hide();
                 $('#logout_button').show();
-                alert('Successfully Logged in.');
             }
-            else{
-                alert(request.responseText);
-            }
+            alert(request.responseText);
         }
     };
     var uname = document.getElementById('uname').value;
