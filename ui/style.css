@@ -194,6 +194,7 @@ nav div {
   font-size: 17px;
   margin: 0;
   margin-top: 5px;
+  box-shadow: none;
 }
 .registration-form form {
   position: relative;  
