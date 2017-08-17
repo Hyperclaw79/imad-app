@@ -92,6 +92,7 @@ function checkUser(data){
 }
 
 function register(){
+   var uname,nname,profile,pwd = "";    
    $('.register_username').on("change keyup paste",
       function(){
         if($(this).val()){
@@ -111,7 +112,7 @@ function register(){
     
     $('.next-button.username').click(function(){
             if(checkUser($(this).val())){ 
-                var uname = $(this).val();
+                uname = $(this).val();
                 $('.username-section').addClass("fold-up");
                 $('.name-section').removeClass("folded");
             }
@@ -135,7 +136,7 @@ function register(){
     
     $('.next-button.name').click(
       function(){
-        var nname = $(this).val();        
+        nname = $(this).val();        
         $('.name-section').addClass("fold-up");
         $('.email-section').removeClass("folded");
       }
@@ -145,7 +146,7 @@ function register(){
       function(){
          var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         if(re.test($(this).val())){
-          var profile = $(this).val();    
+          profile = $(this).val();    
           $('.icon-paper-plane').addClass("next");
         } else {
           $('.icon-paper-plane').removeClass("next");
@@ -193,7 +194,7 @@ function register(){
       function(){
         if($(this).val()===$('.password').val()){
           $('.icon-repeat-lock').addClass("next");
-          var pwd = $(this).val();
+          pwd = $(this).val();
         } else {
           $('.icon-repeat-lock').removeClass("next");
         }
@@ -208,7 +209,7 @@ function register(){
     );
 
     var request = new XMLHttpRequest();
-    if(uname&&nname&&profile&&pwd){
+    if((uname.length+nname.length+profile.length+pwd.length)>14){
         request.open('POST','http://dragonlordthota717.imad.hasura-app.io/register', true);
         request.setRequestHeader('Content-Type','application/json');
         request.send(JSON.stringify({"username":uname,"name":nname,"imad-profile":profile,"password":pwd}));
