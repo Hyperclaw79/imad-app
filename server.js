@@ -122,28 +122,22 @@ app.post('/register',function(req,res){
     var password = req.body.password;
     var profile = req.body.imad-profile;
     var nname = req.body.name;
-    pool.query('SELECT (username,password) FROM "authlist" WHERE "username" = $1',[uname],function(err,result){
+    var salt = crypto.randomBytes(128).toString('hex');
+    var hashedPwd = hash(password,salt);
+    pool.query('INSERT INTO "users" ("name","imad-profile","username") VALUES ($1, $2, $3)',[nname,profile,uname],function(err,result){
         if(err){
             res.status(500).send(err.toString());
         }
         else{
-            if(result.rows.length!==0){
-                res.status(403).send('Account already exists. Please Login.');
-            }
-            else{
-                var salt = crypto.randomBytes(128).toString('hex');
-                var hashedPwd = hash(password,salt);
-                pool.query('INSERT INTO "authlist" (username,password) VALUES ($1, $2)',[uname,hashedPwd],function(err,result){
-                    if(err){
-                        res.status(500).send(err.toString());
-                    }
-                    else{
-                        res.send("Account succesfully created with the username: "+username);
-                    }
-                });
-            }
-        }
-    });
+            pool.query('INSERT INTO "authlist" ("username","password") VALUES ($1, $2)',[uname,hashedPwd],function(err,result){
+                if(err){
+                    res.status(500).send(err.toString());
+                }
+                else{
+                    res.send("Account succesfully created with the username: "+username);
+                }
+            });
+    }    
 });
 
 app.post('/check-user',function(req,res){
