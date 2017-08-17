@@ -115,7 +115,8 @@ function register(){
     );
     
     $('.next-button.username').click(function(){
-            if(checkUser($('.register_username').val())){ 
+            var toggle = checkUser($('.register_username').val());
+            if(toggle===true){ 
                 uname = $(this).val();
                 $('.username-section').addClass("fold-up");
                 $('.name-section').removeClass("folded");
