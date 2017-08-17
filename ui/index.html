@@ -5,6 +5,8 @@
   <script type="text/javascript" src="ui/main.js"></script>
   <link rel="stylesheet" type="text/css" href="ui/style.css">
   <link rel="stylesheet" type = "text/css" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,900' rel='stylesheet' type='text/css'>
   <title>Welcome to Harshith Thota's IMAD Profile!</title>
   <meta name = "description" content = "This is the IMAD profile for Harshith Thota."/>
   <meta name = "author" content = "Harshith Thota"/>
@@ -115,6 +117,51 @@ function play_oh(){
     <img id = "pimage" src="https://s-media-cache-ak0.pinimg.com/600x315/c6/17/8c/c6178cf10c940c5e38c1f8cb589a502c.jpg" width=30 height=30 />  
     <input id = "submit" type = "image" src = "https://www.shareicon.net/data/2015/08/29/92934_super_400x400.png" alt = "Login" onclick = verify()>
   </form>
+  <!--Registeration-->
+
+  <div class="registration-form">
+  <header>
+    <h1>Register to create an account</h1>
+    <p>Fill in all informations</p>
+  </header>
+  <form>
+  
+	<div class="input-section username-section">
+      <input class="register_username"
+             type="text" placeholder="&gt;ENTER USERNAME" autocomplete="off"/>
+      <div class="animated-button"><span class="icon-uname"><i class="fa fa-star-o"></i></span><span class="next-button username"><i class="fa fa-arrow-up"></i></span></div>
+	</div>
+	
+	<div class="input-section name-section folded">  
+        <input class="register_name" type="text" placeholder="&gt;WHAT IS YOUR NAME?" autocomplete="off"/>
+        <div class="animated-button"><span class="icon-name"><i class="fa fa-pencil-square-o"></i></span><span class="next-button name"><i class="fa fa-arrow-up"></i></span></div>
+	</div>
+	
+	<div class="input-section email-section folded">  
+        <input class="email" type="email" placeholder="&gt;IMAD PROFILE LINK" autocomplete="off"/>
+        <div class="animated-button"><span class="icon-paper-plane"><i class="fa fa-envelope-o"></i></span><span class="next-button email"><i class="fa fa-arrow-up"></i></span></div>
+	</div>
+ 
+   <div class="input-section password-section folded">
+      <input class="password" type="password" placeholder="&gt;ENTER PASSWORD"/>
+      <div class="animated-button"><span class="icon-lock"><i class="fa fa-lock"></i></span><span class="next-button password"><i class="fa fa-arrow-up"></i></span></div>
+    </div>
+   
+   <div class="input-section repeat-password-section folded">
+      <input class="repeat-password" type="password" placeholder="&gt;REPEAT PASSWORD"/>
+      <div class="animated-button"><span class="icon-repeat-lock"><i class="fa fa-lock"></i></span><span class="next-button repeat-password"><i class="fa fa-paper-plane"></i></span></div>
+    </div>
+    
+	<div class="success"> 
+      <p>&gt;ACCOUNT CREATED</p>
+    </div>
+  
+  </form>
+</div>
+
+
+  <!--Form-->
+  
   <div class="container text-center full-height">
     <div class="row content">
       <div class="col-sm-4 sidenav">
