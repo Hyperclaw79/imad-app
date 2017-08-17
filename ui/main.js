@@ -124,25 +124,18 @@ function register(){
             request.onreadystatechange = function(){
                 if (request.readyState === XMLHttpRequest.DONE){
                     if (request.status === 403){
-                        toggle = "Account Exists.";
+                        alert('Account already exists. Please Login.');
                     }
                     else if(request.status === 200){
-                        console.log('something fishy is going on');
-                        toggle = "Proceed.";
+                        $('.username-section').addClass("fold-up");
+                        $('.name-section').removeClass("folded");
                     }
                 }
             };
             request.open('POST','http://dragonlordthota717.imad.hasura-app.io/check-user', true);
             request.setRequestHeader('Content-Type','application/json');
             request.send(JSON.stringify({"username":uname}));
-            if(toggle==="Proceed."){ 
-                uname = $(this).val();
-                $('.username-section').addClass("fold-up");
-                $('.name-section').removeClass("folded");
-            }
-            else if(toggle==="Account Exists."){
-                alert('Account already exists. Please Login.');
-            }    
+                
     });
     $('.register_name').on("change keyup paste",
       function(){
