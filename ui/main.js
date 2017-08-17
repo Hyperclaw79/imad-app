@@ -208,10 +208,11 @@ function register(){
     );
 
     var request = new XMLHttpRequest();
-    request.open('POST','http://dragonlordthota717.imad.hasura-app.io/register', true);
-    request.setRequestHeader('Content-Type','application/json');
-    request.send(JSON.stringify({"username":uname,"name":nname,"imad-profile":profile,"password":pwd}));
-
+    if(uname&&nname&&profile&&pwd){
+        request.open('POST','http://dragonlordthota717.imad.hasura-app.io/register', true);
+        request.setRequestHeader('Content-Type','application/json');
+        request.send(JSON.stringify({"username":uname,"name":nname,"imad-profile":profile,"password":pwd}));
+    }
 }
 
 function logout(){
