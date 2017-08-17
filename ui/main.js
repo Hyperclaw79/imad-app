@@ -55,7 +55,14 @@ function verify(){
                 $('#dropbtn').hide();
                 $('#logout_button').show();
             }
-            alert(request.responseText);
+            else if (request.responseText === 'Account does not exist. Please Register.'){
+                if(confirm("That username doesn't exist. Click OK to register now.")=== true){
+                    $('.registration-form').show();
+                }
+            }
+            else{
+                alert(request.responseText);
+            }
         }
     };
     var uname = document.getElementById('uname').value;
@@ -64,6 +71,8 @@ function verify(){
     request.setRequestHeader('Content-Type','application/json');
     request.send(JSON.stringify({"username":uname,"password":pwd}));
 }
+
+
 
 function logout(){
     var request = new XMLHttpRequest();
