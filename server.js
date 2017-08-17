@@ -117,9 +117,11 @@ app.get('/hash/:input',function(req,res){
     res.send(hashedString);
 });
 
-app.post('/create_account',function(req,res){
+app.post('/register',function(req,res){
     var uname = req.body.username;
     var password = req.body.password;
+    var profile = req.body.imad-profile;
+    var nname = req.body.name;
     pool.query('SELECT (username,password) FROM "authlist" WHERE "username" = $1',[uname],function(err,result){
         if(err){
             res.status(500).send(err.toString());
