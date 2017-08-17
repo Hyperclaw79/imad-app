@@ -84,7 +84,7 @@ function checkUser(data){
             if (request.status === 403){
                 return false;
             }
-            else{
+            else if(request.status === 200){
                 return true;
             }
         }
