@@ -119,7 +119,7 @@ function register(){
     
     $('.next-button.username').click(function(){
             var request = new XMLHttpRequest();
-            var uname = $('.register_name').val();
+            var uname = $('.register_username').val();
             var toggle = "stateless";
             request.onreadystatechange = function(){
                 if (request.readyState === XMLHttpRequest.DONE){
