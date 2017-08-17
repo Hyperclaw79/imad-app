@@ -76,19 +76,20 @@ function verify(){
 function checkUser(data){
     var request = new XMLHttpRequest();
     var uname = data;
-    request.open('POST','http://dragonlordthota717.imad.hasura-app.io/check-user', true);
-    request.setRequestHeader('Content-Type','application/json');
-    request.send(JSON.stringify({"username":uname}));
     request.onreadystatechange = function(){
         if (request.readyState === XMLHttpRequest.DONE){
             if (request.status === 403){
                 return false;
             }
             else if(request.status === 200){
+                console.log('something fishy is going on');
                 return true;
             }
         }
     };
+    request.open('POST','http://dragonlordthota717.imad.hasura-app.io/check-user', true);
+    request.setRequestHeader('Content-Type','application/json');
+    request.send(JSON.stringify({"username":uname}));
 }
 
 function register(){
