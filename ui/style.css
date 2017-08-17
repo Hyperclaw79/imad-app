@@ -142,6 +142,7 @@ nav div {
 }
 
 .registration-form {
+  display: none;
   font-family: "Roboto";
   z-index: 99;
   font-weight: 900;
@@ -256,7 +257,6 @@ nav div {
   background: #000;
   color: red;
   width: 80%;
-  
   padding: 20px 40px;
   margin: 0;
   border: 2px inset red;
