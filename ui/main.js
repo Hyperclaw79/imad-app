@@ -95,14 +95,10 @@ function register(){
    $('.register_username').on("change keyup paste",
       function(){
         if($(this).val()){
-            if(checkUser($(this).val())){ 
-                var uname = $(this).val();
-                $('.icon-uname').addClass("next");
-            }
-            else alert('Account already exists. Please Login.');
+            $('.icon-uname').addClass("next");            
         } 
         else {
-          $('.icon-uname').removeClass("next");
+            $('.icon-uname').removeClass("next");
         }
       }
     );
@@ -113,16 +109,17 @@ function register(){
       }
     );
     
-    $('.next-button.username').click(
-      function(){
-        $('.username-section').addClass("fold-up");
-        $('.name-section').removeClass("folded");
-      }
-    );
+    $('.next-button.username').click(function(){
+            if(checkUser($(this).val())){ 
+                var uname = $(this).val();
+                $('.username-section').addClass("fold-up");
+                $('.name-section').removeClass("folded");
+            }
+            else alert('Account already exists. Please Login.');
+    });
     $('.register_name').on("change keyup paste",
       function(){
         if($(this).val()){
-          var nname = $(this).val();        
           $('.icon-name').addClass("next");
         } else {
           $('.icon-name').removeClass("next");
@@ -138,6 +135,7 @@ function register(){
     
     $('.next-button.name').click(
       function(){
+        var nname = $(this).val();        
         $('.name-section').addClass("fold-up");
         $('.email-section').removeClass("folded");
       }
