@@ -139,7 +139,21 @@ app.post('/create_account',function(req,res){
                         res.send("Account succesfully created with the username: "+username);
                     }
                 });
+            }
         }
+    });
+});
+
+app.post('/check-user',function(req,res){
+    var uname = req.body.username;
+    pool.query('SELECT username FROM "authlist" WHERE "username" = $1',[uname],function(err,result){
+        if(err){
+            res.status(500).send(err.toString());
+        }
+        else{
+            if(result.rows.length!==0){
+                res.status(403).send('Account already exists. Please Login.');
+            }
         }
     });
 });
