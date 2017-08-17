@@ -222,6 +222,7 @@ function register(){
     
     $('.next-button.repeat-password').click(
       function(){
+        uname = $('.register_username').val();
         var reg = new XMLHttpRequest();
         reg.onreadystatechange = function(){
             if (reg.readyState === XMLHttpRequest.DONE){
