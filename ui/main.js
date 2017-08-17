@@ -222,17 +222,16 @@ function register(){
     
     $('.next-button.repeat-password').click(
       function(){
+        var request = new XMLHttpRequest();
+        if((uname.length+nname.length+profile.length+pwd.length)>14){
+            request.open('POST','http://dragonlordthota717.imad.hasura-app.io/register', true);
+            request.setRequestHeader('Content-Type','application/json');
+            request.send(JSON.stringify({"username":uname,"name":nname,"imad-profile":profile,"password":pwd}));
+        }
         $('.repeat-password-section').addClass("fold-up");
         $('.success').css("marginTop", 0);
       }
     );
-
-    var request = new XMLHttpRequest();
-    if((uname.length+nname.length+profile.length+pwd.length)>14){
-        request.open('POST','http://dragonlordthota717.imad.hasura-app.io/register', true);
-        request.setRequestHeader('Content-Type','application/json');
-        request.send(JSON.stringify({"username":uname,"name":nname,"imad-profile":profile,"password":pwd}));
-    }
 }
 
 function logout(){
