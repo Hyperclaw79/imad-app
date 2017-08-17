@@ -149,7 +149,7 @@ app.post('/check-user',function(req,res){
         }
         else{
             if(result.rows.length!==0){
-                res.status(403).send('Account already exists. Please Login.');
+                res.status(403).send('Account already exists.');
             }
             else{
                 res.status(200).send('Permission Granted.');    
