@@ -85,6 +85,9 @@ function checkUser(data){
                 console.log('something fishy is going on');
                 return true;
             }
+        else{
+            return "wait";
+        }    
         }
     };
     request.open('POST','http://dragonlordthota717.imad.hasura-app.io/check-user', true);
@@ -115,13 +118,18 @@ function register(){
     );
     
     $('.next-button.username').click(function(){
-            var toggle = checkUser($('.register_username').val());
+            var toggle = "wait";
+            while(toggle!=="wait"){
+                toggle = checkUser($('.register_username').val());
+            }
             if(toggle===true){ 
                 uname = $(this).val();
                 $('.username-section').addClass("fold-up");
                 $('.name-section').removeClass("folded");
             }
-            else alert('Account already exists. Please Login.');
+            else if(toggle!=="wait"){
+                alert('Account already exists. Please Login.');
+            }    
     });
     $('.register_name').on("change keyup paste",
       function(){
