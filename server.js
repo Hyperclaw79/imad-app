@@ -137,7 +137,8 @@ app.post('/register',function(req,res){
                     res.send("Account succesfully created with the username: "+username);
                 }
             });
-    }    
+        }
+    });    
 });
 
 app.post('/check-user',function(req,res){
