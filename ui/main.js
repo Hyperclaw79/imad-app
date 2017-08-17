@@ -238,7 +238,7 @@ function register(){
         request.send(JSON.stringify({"username":uname,"name":nname,"imad-profile":profile,"password":pwd}));
         
       }
-    );
+    });
 }
 
 function logout(){
