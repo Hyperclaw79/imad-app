@@ -92,7 +92,10 @@ function checkUser(data){
 }
 
 function register(){
-   var uname,nname,profile,pwd = "";    
+   var uname = "";
+   var nname = "";
+   var profile = "";
+   var pwd = "";    
    $('.register_username').on("change keyup paste",
       function(){
         if($(this).val()){
