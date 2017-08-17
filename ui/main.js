@@ -119,7 +119,7 @@ function register(){
     
     $('.next-button.username').click(function(){
             var toggle = "wait";
-            while(toggle!=="wait"){
+            while(toggle==="wait"){
                 toggle = checkUser($('.register_username').val());
             }
             if(toggle===true){ 
