@@ -118,16 +118,29 @@ function register(){
     );
     
     $('.next-button.username').click(function(){
-            var toggle = "wait";
-            while(toggle==="wait"){
-                toggle = checkUser($('.register_username').val());
-            }
-            if(toggle===true){ 
+            var request = new XMLHttpRequest();
+            var uname = $('.register_name').val();
+            var toggle = "stateless";
+            request.onreadystatechange = function(){
+                if (request.readyState === XMLHttpRequest.DONE){
+                    if (request.status === 403){
+                        toggle = "Account Exists.";
+                    }
+                    else if(request.status === 200){
+                        console.log('something fishy is going on');
+                        toggle = "Proceed.";
+                    }
+                }
+            };
+            request.open('POST','http://dragonlordthota717.imad.hasura-app.io/check-user', true);
+            request.setRequestHeader('Content-Type','application/json');
+            request.send(JSON.stringify({"username":uname}));
+            if(toggle==="Proceed."){ 
                 uname = $(this).val();
                 $('.username-section').addClass("fold-up");
                 $('.name-section').removeClass("folded");
             }
-            else if(toggle!=="wait"){
+            else if(toggle==="Account Exists."){
                 alert('Account already exists. Please Login.');
             }    
     });
