@@ -114,7 +114,7 @@ function register(){
     );
     
     $('.next-button.username').click(function(){
-            if(checkUser($(this).val())){ 
+            if(checkUser($('.register_username').val())){ 
                 uname = $(this).val();
                 $('.username-section').addClass("fold-up");
                 $('.name-section').removeClass("folded");
@@ -139,7 +139,7 @@ function register(){
     
     $('.next-button.name').click(
       function(){
-        nname = $(this).val();        
+        nname = $('register_name').val();        
         $('.name-section').addClass("fold-up");
         $('.email-section').removeClass("folded");
       }
