@@ -141,6 +141,192 @@ nav div {
   box-shadow: 5px 5px 5px #000;
 }
 
+.registration-form {
+  font-family: "Roboto";
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-size: 18px;
+  border-radius: 15px 15px 0px 0px;
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  top: 15%;
+  background: transparent;
+  margin: 100px auto 0 auto;
+  box-shadow: 0 0 30px rgba(0,0,0,0.4);
+}
+.registration-form header {
+  position: relative;
+  z-index: 4;
+  border-radius: 15px 15px 0px 0px;
+  text-align: center;
+  color: #525252;
+  padding: 5px 0;
+  margin: 0;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+  font-size: 0.85em;
+  border: 1px solid #CCCCCC;
+  border-bottom: none;
+  background: #f7f7f7; /* Old browsers */
+  background: -moz-linear-gradient(top,  #f7f7f7 0%, #B8B8B8 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#B8B8B8)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #f7f7f7 0%,#B8B8B8 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #f7f7f7 0%,#B8B8B8 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #f7f7f7 0%,#B8B8B8 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #f7f7f7 0%,#B8B8B8 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#B8B8B8',GradientType=0 ); /* IE6-9 */
+
+}
+.registration-form header h1 {
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  color: #333;
+  font-size: 23px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.registration-form header p {
+  word-spacing: 0px;
+  color: #9facb6;
+  font-size: 17px;
+  margin: 0;
+  margin-top: 5px;
+}
+.registration-form form {
+  position: relative;  
+}
+.registration-form .input-section {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 75px;
+  border-radius: 7px 7px 15px 15px;
+  overflow: hidden;
+  z-index: 2;
+  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in;
+  
+}
+.registration-form .input-section.folded {
+  width: 95%;
+  margin-top: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  box-shadow: 2px 2px 100px rgba(255, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 15px 15px 15px 15px;
+  
+}
+.registration-form .input-section.folded input {
+  box-shadow: 2px 2px 100px rgba(255, 0, 0, 0.2);
+  background-color: grey;
+}
+.registration-form .input-section.folded span {
+  background-color: grey;
+  border-radius: 15px 15px 15px 0px;
+  
+}
+.registration-form .input-section.folded + .folded {
+  width: 90%;
+  margin-top: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 15px 15px 15px 15px;
+  z-index: 0;
+}
+.registration-form .input-section.folded + .folded input {
+  border-radius: 15px 15px 0px 15px;
+  background-color: black;
+  border-right: 0px;
+}
+.registration-form .input-section.folded + .folded span {
+  border-radius: 15px 15px 15px 0px;
+  border: 0px;
+  background-color: black;
+}
+.registration-form .input-section.fold-up {
+  border-radius: 15px 15px 15px 15px;
+  margin-top: -75px;
+}
+.registration-form form input {
+  background: #000;
+  color: red;
+  width: 80%;
+  height: 50%;
+  padding: 20px 40px;
+  margin: 0;
+  border: 2px inset red;
+  border-right: 0px;  
+}
+.registration-form form input:focus {
+  outline: none;
+}
+.registration-form form input::placeholder {
+  color: red;
+  font-weight: 100;
+}
+.animated-button {
+  width: 20%;
+  background-color: #000;
+  border-left: 3px inset red;
+  border-top: 3px inset red;
+}
+.animated-button span {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  line-height: 75px;
+  text-align: center;
+  height: 75px;
+  transition: all 0.2s ease-in;
+}
+.animated-button span i {
+  font-size: 25px;
+  color: red;
+}
+.animated-button .next-button {
+  background: black;
+  border: 1px inset red;
+  border-left: 0px;
+  border-left: 0px;
+  font-weight: 100;
+  width: 100%;
+}
+.next {
+  margin-top: -75px;
+}
+.success {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 75px;
+  border-radius: 0 0 15px 15px;
+  overflow: hidden;
+  z-index: 2;
+  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in;
+  background: black;
+  margin-top: -75px;
+}
+.success p {
+  color: red;
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+
 /* Remove the navbar's default margin-bottom and rounded borders */
 .navbar {
   margin-bottom: 0;
