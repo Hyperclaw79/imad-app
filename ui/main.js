@@ -232,12 +232,12 @@ function register(){
                 else{
                     alert(reg.responseText);    
                 }
-            };
+            }
+        };
         reg.open('POST','http://dragonlordthota717.imad.hasura-app.io/register', true);
         reg.setRequestHeader('Content-Type','application/json');
         reg.send(JSON.stringify({"username":uname,"name":nname,"imad-profile":profile,"password":pwd}));
         
-      }
     });
 }
 
