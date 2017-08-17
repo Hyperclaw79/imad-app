@@ -143,6 +143,7 @@ nav div {
 
 .registration-form {
   font-family: "Roboto";
+  z-index: 99;
   font-weight: 900;
   letter-spacing: 2px;
   font-size: 18px;
