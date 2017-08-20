@@ -146,7 +146,7 @@ function register() {
 
                     $('.next-button.name').click(
                         function() {
-                            nname = $('register_name').val();
+                            nname = $('.register_name').val();
                             console.log("First nname: "+nname);
                             $('.name-section').addClass("fold-up");
                             $('.email-section').removeClass("folded");
