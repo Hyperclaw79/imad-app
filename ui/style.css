@@ -261,7 +261,8 @@ nav div {
   padding: 20px 40px;
   margin: 0;
   border: 2px inset red;
-  border-right: 0px;  
+  border-right: 0;  
+  border-radius: 0 0 0 15px;
 }
 .registration-form form input:focus {
   outline: none;
@@ -273,8 +274,8 @@ nav div {
 .animated-button {
   width: 20%;
   background-color: #000;
-  border-left: 3px inset red;
-  border-top: 3px inset red;
+  border: 3px inset red;
+  border-radius: 0 0 15px 0;
 }
 .animated-button span {
   display: flex;
