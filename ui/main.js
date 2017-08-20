@@ -219,7 +219,7 @@ function register() {
                                                     reg.setRequestHeader('Content-Type', 'application/json');
                                                     reg.send(JSON.stringify({
                                                         "username": uname,
-                                                        "name": nname,
+                                                        "nname": nname,
                                                         "imad-profile": profile,
                                                         "password": pwd
                                                     }));
