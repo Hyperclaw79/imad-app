@@ -58,7 +58,7 @@ function verify(){
             else if (request.responseText === 'Account does not exist. Please Register.'){
                 if(confirm("That username doesn't exist. Click OK to register now.")=== true){
                     $('.registration-form').show();
-                    $('.registration-form').siblings().css({opacity: 0.5});
+                    $('.registration-form').siblings().css({opacity: 0.15});
                     register();
                 }
             }
