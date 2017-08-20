@@ -216,14 +216,16 @@ function register() {
                                                             }
                                                         }
                                                     };
-                                                    reg.open('POST', 'http://dragonlordthota717.imad.hasura-app.io/register', true);
-                                                    reg.setRequestHeader('Content-Type', 'application/json');
-                                                    reg.send(JSON.stringify({
+                                                    var param_array = {
                                                         "username": uname,
                                                         "nname": nname,
                                                         "imad-profile": profile,
                                                         "password": pwd
-                                                    }));
+                                                    };
+                                                    console.log(param_array);
+                                                    reg.open('POST', 'http://dragonlordthota717.imad.hasura-app.io/register', true);
+                                                    reg.setRequestHeader('Content-Type', 'application/json');
+                                                    reg.send(JSON.stringify(param_array));
 
                                                 });
                                         }
