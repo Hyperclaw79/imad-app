@@ -147,6 +147,7 @@ function register() {
                     $('.next-button.name').click(
                         function() {
                             nname = $('register_name').val();
+                            console.log("First nname: "+nname);
                             $('.name-section').addClass("fold-up");
                             $('.email-section').removeClass("folded");
                             $('.email').on("change keyup paste",
@@ -169,6 +170,7 @@ function register() {
 
                             $('.next-button.email').click(
                                 function() {
+                                    console.log("Email_clicked nname: "+nname);
                                     $('.email-section').addClass("fold-up");
                                     $('.password-section').removeClass("folded");
                                     $('.password').on("change keyup paste",
@@ -189,6 +191,7 @@ function register() {
 
                                     $('.next-button.password').click(
                                         function() {
+                                            console.log("Password_clicked nname: "+nname);
                                             $('.password-section').addClass("fold-up");
                                             $('.repeat-password-section').removeClass("folded");
                                             $('.repeat-password').on("change keyup paste",
@@ -204,7 +207,7 @@ function register() {
 
                                             $('.next-button.repeat-password').click(
                                                 function() {
-                                                    uname = $('.register_username').val();
+                                                    console.log("Repeat_passowrd_clicked nname: "+nname);
                                                     var reg = new XMLHttpRequest();
                                                     reg.onreadystatechange = function() {
                                                         if (reg.readyState === XMLHttpRequest.DONE) {
