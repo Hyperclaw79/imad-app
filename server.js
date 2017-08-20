@@ -121,7 +121,7 @@ app.post('/register',function(req,res){
     var uname = req.body.username;
     var password = req.body.password;
     var profile = req.body.imad-profile;
-    var nname = req.body.name;
+    var nname = req.body.nname;
     var salt = crypto.randomBytes(128).toString('hex');
     var hashedPwd = hash(password,salt);
     pool.query('INSERT INTO "users" ("name","imad-profile","username") VALUES ($1, $2, $3)',[nname,profile,uname],function(err,result){
