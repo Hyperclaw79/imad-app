@@ -124,6 +124,7 @@ app.post('/register',function(req,res){
     var nname = req.body.nname;
     var salt = crypto.randomBytes(128).toString('hex');
     var hashedPwd = hash(password,salt);
+    console.log({"uname":uname,"nname":nname,"profile":profile});
     pool.query('INSERT INTO "users" ("name","imad-profile","username") VALUES ($1, $2, $3)',[nname,profile,uname],function(err,result){
         if(err){
             res.status(500).send(err.toString());
