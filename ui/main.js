@@ -151,7 +151,7 @@ function register() {
                             $('.email-section').removeClass("folded");
                             $('.email').on("change keyup paste",
                                 function() {
-                                    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                                    var re = /(http:[^ ]+|[\S]+)\.(imad|imad-b)+\.hasura-app\.io/;
                                     if (re.test($(this).val())) {
                                         profile = $(this).val();
                                         $('.icon-paper-plane').addClass("next");
