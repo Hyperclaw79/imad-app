@@ -212,9 +212,10 @@ function register() {
                                                                 $('.success').css("marginTop", 0);
                                                                 setTimeout(function(){
                                                                     $('.registration-form').siblings().css({opacity:1});
-                                                                },25000);
                                                                     $('.registration-form').animate({height:0,opacity:0},2000);
-                                                            } else {
+                                                                },25000);
+                                                            } 
+                                                            else {
                                                                 alert(reg.responseText);
                                                             }
                                                         }
