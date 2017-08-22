@@ -213,6 +213,7 @@ function register() {
                                                                 setTimeout(function(){
                                                                     $('.registration-form').siblings().css({opacity:1});
                                                                     $('.registration-form').animate({height:0,opacity:0},2000);
+                                                                    location.reload();
                                                                 },25000);
                                                             } 
                                                             else {
