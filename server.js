@@ -134,7 +134,7 @@ app.post('/register',function(req,res){
                     res.status(500).send(err.toString());
                 }
                 else{
-                    res.send("Account succesfully created with the username: "+username);
+                    res.send("Account succesfully created with the username: "+uname);
                 }
             });
         }
