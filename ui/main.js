@@ -213,7 +213,7 @@ function register() {
                                                                 setTimeout(function(){
                                                                     $('.registration-form').siblings().css({opacity:1});
                                                                 },25000);
-                                                                    $('.registration-form').css({height:0,transition: height 2s linear});
+                                                                    $('.registration-form').animate({height:0,opacity:0},2000);
                                                             } else {
                                                                 alert(reg.responseText);
                                                             }
